@@ -41,13 +41,8 @@ function generateRedirects() {
   const csvContent = fs.readFileSync(csvPath, 'utf8');
   const links = parseCSV(csvContent);
 
-  const rules = new Set();
-  const outputLines = [
-    '# ==============================================================================',
-    '# Cloudflare Pages Redirects - Melhores Fones (Pretty Links Mapeados)',
-    '# ==============================================================================',
-    ''
-  ];
+  // Map<fromPath, { targetUrl, statusCode }> para garantir unicidade absoluta por caminho
+  const redirectsMap = new Map();
 
   for (const item of links) {
     if (!item.slug || !item.url) continue;
@@ -77,21 +72,29 @@ function generateRedirects() {
     }
 
     for (const v of variants) {
-      const rule = `${v} ${targetUrl} ${statusCode}`;
-      if (!rules.has(rule)) {
-        rules.add(rule);
-        outputLines.push(rule);
-      }
+      // Como o CSV pode ter múltiplos links com o mesmo slug, o mais recente sobrescreve
+      redirectsMap.set(v, { targetUrl, statusCode });
     }
+  }
+
+  const outputLines = [
+    '# ==============================================================================',
+    '# Cloudflare Pages Redirects - Melhores Fones (Pretty Links Mapeados)',
+    '# ==============================================================================',
+    ''
+  ];
+
+  for (const [fromPath, { targetUrl, statusCode }] of redirectsMap.entries()) {
+    outputLines.push(`${fromPath} ${targetUrl} ${statusCode}`);
   }
 
   const finalContent = outputLines.join('\n') + '\n';
   fs.writeFileSync(path.resolve('public/_redirects'), finalContent, 'utf8');
-  console.log(`Generated public/_redirects with ${rules.size} redirect rules from ${links.length} Pretty Links.`);
+  console.log(`Generated public/_redirects with ${redirectsMap.size} unique redirect rules from ${links.length} Pretty Links entries.`);
 
   if (fs.existsSync(path.resolve('dist'))) {
     fs.writeFileSync(path.resolve('dist/_redirects'), finalContent, 'utf8');
-    console.log(`Updated dist/_redirects with ${rules.size} redirect rules.`);
+    console.log(`Updated dist/_redirects with ${redirectsMap.size} unique redirect rules.`);
   }
 }
 
