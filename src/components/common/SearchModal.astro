@@ -1,0 +1,209 @@
+---
+import { posts, categories, getFeaturedImage } from '../../utils/content.js';
+
+// Prepare compact search index
+const searchData = posts.map((p: any) => {
+  const isDuvida = p.categories?.includes(21);
+  const catName = isDuvida ? 'Dúvidas' : 'Melhores';
+  const img = getFeaturedImage(p);
+  const excerpt = (p.excerpt?.rendered || '').replace(/<[^>]+>/g, '').slice(0, 90).trim();
+
+  return {
+    title: p.title?.rendered || '',
+    slug: p.slug,
+    url: `/${p.slug}/`,
+    category: catName,
+    image: img.url,
+    excerpt: excerpt
+  };
+});
+---
+
+<!-- Modal de Busca Instantânea -->
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Buscar fones e artigos">
+  <div class="search-modal-backdrop" id="search-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-box-header">
+      <div class="search-input-wrap">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Digite o modelo, marca ou categoria (ex: QCY H3, academia, TWS, ANC)..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="search-clear-btn" class="search-clear-btn" aria-label="Limpar busca" style="display: none;">
+          ✕
+        </button>
+      </div>
+      <button id="search-close-btn" class="search-close-btn" aria-label="Fechar busca">ESC</button>
+    </div>
+
+    <!-- Sugestões Rápidas -->
+    <div class="search-tags-row" id="search-suggestions">
+      <span class="search-tag-label">Sugestões:</span>
+      <button type="button" class="search-quick-tag" data-query="QCY">QCY</button>
+      <button type="button" class="search-quick-tag" data-query="Academia">🏃 Academia</button>
+      <button type="button" class="search-quick-tag" data-query="TWS">⚡ TWS</button>
+      <button type="button" class="search-quick-tag" data-query="Headphone">🎧 Headphones</button>
+      <button type="button" class="search-quick-tag" data-query="Gamer">🎮 Gamer</button>
+      <button type="button" class="search-quick-tag" data-query="Resetar">🔧 Resetar</button>
+    </div>
+
+    <!-- Resultados -->
+    <div class="search-results-wrap" id="search-results" role="listbox">
+      <div class="search-empty-state">
+        <p>Comece a digitar para pesquisar entre os 73 guias e avaliações do Melhores Fones.</p>
+      </div>
+    </div>
+
+    <div class="search-footer-info">
+      <span>Dica: Use <strong>↑</strong> <strong>↓</strong> para navegar e <strong>ESC</strong> para fechar.</span>
+      <span class="search-count-badge" id="search-count">{searchData.length} artigos indexados</span>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ searchData }}>
+  (function() {
+    const modal = document.getElementById('search-modal');
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('search-results');
+    const backdrop = document.getElementById('search-backdrop');
+    const closeBtn = document.getElementById('search-close-btn');
+    const clearBtn = document.getElementById('search-clear-btn');
+    const countBadge = document.getElementById('search-count');
+    const quickTags = document.querySelectorAll('.search-quick-tag');
+
+    function openSearch() {
+      if (!modal) return;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => input && input.focus(), 50);
+    }
+
+    function closeSearch() {
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (input) input.value = '';
+      renderResults('');
+    }
+
+    // Expose globally for header search trigger buttons
+    window.openSearchModal = openSearch;
+    window.closeSearchModal = closeSearch;
+
+    if (backdrop) backdrop.addEventListener('click', closeSearch);
+    if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (input) {
+          input.value = '';
+          input.focus();
+          renderResults('');
+          clearBtn.style.display = 'none';
+        }
+      });
+    }
+
+    // Shortcut Ctrl+K / Cmd+K or /
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (modal && modal.classList.contains('is-open')) {
+          closeSearch();
+        } else {
+          openSearch();
+        }
+      } else if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+        closeSearch();
+      }
+    });
+
+    quickTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        const query = tag.getAttribute('data-query');
+        if (input && query) {
+          input.value = query;
+          renderResults(query);
+          input.focus();
+        }
+      });
+    });
+
+    function normalize(str) {
+      return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function renderResults(query) {
+      if (!results) return;
+      const cleanQ = normalize(query.trim());
+
+      if (clearBtn) {
+        clearBtn.style.display = cleanQ ? 'inline-block' : 'none';
+      }
+
+      if (!cleanQ) {
+        results.innerHTML = `
+          <div class="search-empty-state">
+            <p>Comece a digitar para pesquisar entre os ${searchData.length} guias e avaliações do Melhores Fones.</p>
+          </div>
+        `;
+        if (countBadge) countBadge.textContent = `${searchData.length} artigos indexados`;
+        return;
+      }
+
+      const words = cleanQ.split(/\s+/).filter(Boolean);
+      const filtered = searchData.filter(item => {
+        const target = normalize(`${item.title} ${item.excerpt} ${item.category} ${item.slug}`);
+        return words.every(word => target.includes(word));
+      });
+
+      if (countBadge) countBadge.textContent = `${filtered.length} encontrados`;
+
+      if (filtered.length === 0) {
+        results.innerHTML = `
+          <div class="search-empty-state">
+            <p>Nenhum resultado encontrado para "<strong>${query}</strong>".</p>
+            <span style="font-size: 0.85rem; color: #94a3b8; display: block; margin-top: 0.5rem;">Tente buscar por marcas como QCY, Xiaomi, JBL ou termos como academia, bluetooth, ANC.</span>
+          </div>
+        `;
+        return;
+      }
+
+      const html = filtered.map(item => `
+        <a href="${item.url}" class="search-result-item" role="option">
+          <img src="${item.image}" alt="${item.title}" class="search-result-thumb" loading="lazy" width="64" height="64" onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"/>
+          <div class="search-result-info">
+            <div class="search-result-top">
+              <span class="search-result-badge ${item.category === 'Dúvidas' ? 'badge-duvida' : 'badge-melhores'}">${item.category}</span>
+              <span class="search-result-title">${item.title}</span>
+            </div>
+            <p class="search-result-desc">${item.excerpt}...</p>
+          </div>
+          <svg class="search-result-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      `).join('');
+
+      results.innerHTML = html;
+    }
+
+    if (input) {
+      input.addEventListener('input', (e) => {
+        renderResults(e.target.value);
+      });
+    }
+  })();
+</script>

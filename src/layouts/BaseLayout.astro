@@ -1,0 +1,98 @@
+---
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import SEO from '../components/common/SEO.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  type?: 'website' | 'article';
+  image?: {
+    url: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+  };
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  type = 'website',
+  image,
+  publishedTime,
+  modifiedTime,
+  author
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://web-sdk.smartlook.com" />
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      type={type}
+      image={image}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+      author={author}
+    />
+
+    <!-- Google Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-TBN734R"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('set', 'linker', {'domains': ['melhoresfones.com']});
+      gtag('js', new Date());
+      gtag('set', 'developer_id.dZTNiMT', true);
+      gtag('config', 'GT-TBN734R');
+      gtag('config', 'G-NYRV2ER6BK');
+    </script>
+
+    <!-- Smartlook Web SDK (carregamento sob demanda/idle para alta performance) -->
+    <script is:inline>
+      function initSmartlook() {
+        if (window._smartlookStarted) return;
+        window._smartlookStarted = true;
+        window.smartlook || (function(d) {
+          var o = smartlook = function() { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
+          var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
+          c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
+        })(document);
+        smartlook('init', '64f331b2a0820cef006751bcabf88d37743a970f', { region: 'eu' });
+      }
+      if (typeof window !== 'undefined') {
+        ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'].forEach(function(evt) {
+          window.addEventListener(evt, initSmartlook, { passive: true, once: true });
+        });
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function() { setTimeout(initSmartlook, 3000); });
+        } else {
+          setTimeout(initSmartlook, 3500);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

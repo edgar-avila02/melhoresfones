@@ -1,0 +1,137 @@
+[
+  {
+    "id": 21,
+    "count": 44,
+    "description": "Bem-vindo à categoria de Dúvidas! Nosso <a class=\"text-indigo-700 underline underline-offset-4\" href=\"https://melhoresfones.com/time-melhores-fones/\" rel=\"noreferrer\">time</a> reuniu as principais perguntas sobre o universo dos fones de ouvido aqui!",
+    "link": "https://melhoresfones.com/duvidas/",
+    "name": "Dúvidas",
+    "slug": "duvidas",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories/21",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/posts?categories=21"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "count": 29,
+    "description": "<p class=\"text-body font-regular leading-[24px] pt-[9px] pb-[2px]\" dir=\"ltr\">Bem-vindo à categoria Melhores! Nosso <a class=\"text-indigo-700 underline underline-offset-4\" href=\"https://melhoresfones.com/time-melhores-fones/\">time de especialistas</a> selecionou os melhores fones de ouvido para ajudá-lo a encontrar o modelo ideal.</p>",
+    "link": "https://melhoresfones.com/melhores/",
+    "name": "Melhores",
+    "slug": "melhores",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories/31",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/posts?categories=31"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 0,
+    "description": "",
+    "link": "https://melhoresfones.com/uncategorized/",
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://melhoresfones.com/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

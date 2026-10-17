@@ -1,0 +1,493 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/blog/PostCard.astro';
+import { posts } from '../utils/content.js';
+
+// Sort posts by date descending
+const sortedPosts = [...posts].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const recentPosts = sortedPosts.slice(0, 12);
+---
+
+<BaseLayout
+  title="Melhores fones - Testes reais, rankings e avaliações de especialistas"
+  description="Avaliações imparciais para você encontrar o fone ideal. Rankings comparativos, testes de áudio na bancada e guias de compra atualizados para 2026."
+  canonical="https://melhoresfones.com/"
+>
+  <!-- Hero Section Split Screen (Ultra Modern & Tech) -->
+  <section class="hero-modern">
+    <div class="site-container hero-grid">
+      <!-- Coluna da Esquerda: Proposta de Valor e Navegação Rápida -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>Áudio lab 2026 &bull; Avaliações 100% independentes</span>
+        </div>
+
+        <h1 class="hero-title">
+          O fone perfeito para você, escolhido com <span class="hero-title-gradient">rigor acústico.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Sem jabás ou patrocínios ocultos. Analisamos cancelamento de ruído ativo (ANC), resposta real de graves, autonomia de bateria e ergonomia para você comprar com a máxima segurança pelo melhor preço.
+        </p>
+
+        <!-- Ações do Hero -->
+        <div class="hero-cta-group">
+          <a href="#rankings" class="hero-cta-btn">
+            <span>Explorar rankings 2026</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="#campeoes" class="hero-secondary-btn">
+            <span>⚡ Escolhas rápidas</span>
+          </a>
+          <button type="button" class="hero-search-btn" onclick="if(window.openSearchModal) window.openSearchModal();" aria-label="Abrir busca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Buscar modelo</span>
+          </button>
+        </div>
+
+        <!-- Atalhos Rápidos por Categoria -->
+        <div class="hero-quick-filters">
+          <span class="quick-filters-label">Atalhos populares:</span>
+          <div class="quick-filters-chips">
+            <a href="/melhores-fones-de-ouvido-para-academia/" class="filter-pill">🏃 Academia e corrida</a>
+            <a href="/melhores-fones-tws/" class="filter-pill">⚡ Fones TWS</a>
+            <a href="/melhor-headphone-sem-fio/" class="filter-pill">🎧 Headphones ANC</a>
+            <a href="/melhores-fones-gamer-custo-beneficio/" class="filter-pill">🎮 Headsets gamer</a>
+            <a href="/melhores-fones-de-ouvido-bluetooth-baratos/" class="filter-pill">💰 Fones baratos</a>
+            <a href="/duvidas/" class="filter-pill">💡 Tutoriais e dúvidas</a>
+          </div>
+        </div>
+
+        <!-- Barra de Métricas de Confiança -->
+        <div class="hero-trust-bar">
+          <div class="trust-stat">
+            <strong class="trust-stat-number">+100</strong>
+            <span class="trust-stat-text">Fones avaliados</span>
+          </div>
+          <div class="trust-stat-divider"></div>
+          <div class="trust-stat">
+            <strong class="trust-stat-number">1.200h+</strong>
+            <span class="trust-stat-text">De testes reais</span>
+          </div>
+          <div class="trust-stat-divider"></div>
+          <div class="trust-stat">
+            <strong class="trust-stat-number">★ 4.9/5</strong>
+            <span class="trust-stat-text">Avaliação dos leitores</span>
+          </div>
+          <div class="trust-stat-divider"></div>
+          <div class="trust-stat">
+            <strong class="trust-stat-number">100%</strong>
+            <span class="trust-stat-text">Isento e imparcial</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna da Direita: Card Vitrine Destaque do Editor -->
+      <div class="hero-showcase">
+        <div class="spotlight-card">
+          <div class="spotlight-top">
+            <span class="spotlight-badge">👑 Escolha do editor 2026</span>
+            <div class="soundwave-anim" aria-hidden="true" title="Áudio ativo">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="spotlight-image-wrap">
+            <img
+              src="https://melhoresfones.com/wp-content/uploads/2025/05/QCY-H3-preto-e-azul.webp"
+              alt="Headphone QCY H3 ANC - Escolha do Editor 2026"
+              width="360"
+              height="240"
+              fetchpriority="high"
+              decoding="async"
+              class="spotlight-img"
+              onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+            />
+          </div>
+
+          <div class="spotlight-body">
+            <div class="spotlight-rating-row">
+              <div class="stars-gold">★★★★★</div>
+              <span class="spotlight-score">Nota 9.8 / 10</span>
+            </div>
+
+            <h3 class="spotlight-title">QCY H3 ANC Híbrido</h3>
+            <p class="spotlight-desc">
+              O headphone com cancelamento de ruído mais eficiente do mercado na faixa até R$ 300. Graves encorpados e bateria lendária de 60 horas.
+            </p>
+
+            <div class="spotlight-specs">
+              <span class="spec-chip">🔇 ANC 43dB</span>
+              <span class="spec-chip">🔋 60h bateria</span>
+              <span class="spec-chip">🎵 Hi-Res 40mm</span>
+              <span class="spec-chip">📶 Bluetooth 5.4</span>
+            </div>
+
+            <div class="spotlight-actions">
+              <a href="/qcy-h3-review/" class="spotlight-btn">
+                <span>Ler análise completa</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Os 4 Campeões de 2026 em Cada Categoria (Comparador Rápido / CRO) -->
+  <section class="site-container quick-compare-section" id="campeoes">
+    <div class="section-header-modern">
+      <span class="section-tag">Guia de compra rápido</span>
+      <h2 class="section-title-modern">Os melhores de 2026 por categoria</h2>
+      <p class="section-desc-modern">
+        Direto ao ponto: selecionamos os modelos vencedores da nossa bancada de testes para cada perfil de usuário e orçamento.
+      </p>
+    </div>
+
+    <div class="champions-grid">
+      <!-- Card 1: Melhor Geral -->
+      <div class="champion-card">
+        <div class="champion-award">👑 Melhor headphone geral</div>
+        <div class="champion-thumb-wrap">
+          <img
+            src="https://melhoresfones.com/wp-content/uploads/2025/05/QCY-H3-preto-e-azul.webp"
+            alt="QCY H3"
+            width="180"
+            height="130"
+            loading="lazy"
+            decoding="async"
+            class="champion-thumb"
+            onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+          />
+        </div>
+        <div class="champion-body">
+          <div class="champion-meta">
+            <span class="champion-score">★ 9.8</span>
+            <span class="champion-price">R$ 250 - R$ 290</span>
+          </div>
+          <h3 class="champion-name">QCY H3 ANC</h3>
+          <p class="champion-highlight">
+            Isolamento acústico de 43dB, drivers potentes de 40mm e 60 horas de autonomia real.
+          </p>
+          <a href="/qcy-h3-review/" class="champion-cta">Ver análise completa &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Melhor TWS Barato -->
+      <div class="champion-card">
+        <div class="champion-award">⚡ Melhor TWS barato</div>
+        <div class="champion-thumb-wrap">
+          <img
+            src="https://melhoresfones.com/wp-content/uploads/2025/06/QCY-T13-demonstracao.webp"
+            alt="QCY T13"
+            width="180"
+            height="130"
+            loading="lazy"
+            decoding="async"
+            class="champion-thumb"
+            onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+          />
+        </div>
+        <div class="champion-body">
+          <div class="champion-meta">
+            <span class="champion-score">★ 9.6</span>
+            <span class="champion-price">R$ 110 - R$ 145</span>
+          </div>
+          <h3 class="champion-name">QCY T13</h3>
+          <p class="champion-highlight">
+            Graves profundos, microfone com redução de ruído para chamadas e excelente case compacto.
+          </p>
+          <a href="/qcy-t13-review/" class="champion-cta">Ver análise completa &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Academia & Corrida -->
+      <div class="champion-card">
+        <div class="champion-award">🏃 Melhor para academia</div>
+        <div class="champion-thumb-wrap">
+          <img
+            src="https://melhoresfones.com/wp-content/uploads/2024/06/Homem-na-academia-descansando-scaled.webp"
+            alt="Fone Academia"
+            width="180"
+            height="130"
+            loading="lazy"
+            decoding="async"
+            class="champion-thumb"
+            onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+          />
+        </div>
+        <div class="champion-body">
+          <div class="champion-meta">
+            <span class="champion-score">★ 9.7</span>
+            <span class="champion-price">Top 12 fones</span>
+          </div>
+          <h3 class="champion-name">Fones para treino</h3>
+          <p class="champion-highlight">
+            Encaixe intra-auricular firme que não cai durante corridas e proteção IPX5 contra suor.
+          </p>
+          <a href="/melhores-fones-de-ouvido-para-academia/" class="champion-cta">Ver top 12 &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Fones TWS Gerais -->
+      <div class="champion-card">
+        <div class="champion-award">🎧 Melhor guia TWS</div>
+        <div class="champion-thumb-wrap">
+          <img
+            src="https://melhoresfones.com/wp-content/uploads/2024/05/Homem-feliz-escultando-musica-com-seus-TWS-scaled.webp"
+            alt="Fones TWS"
+            width="180"
+            height="130"
+            loading="lazy"
+            decoding="async"
+            class="champion-thumb"
+            onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+          />
+        </div>
+        <div class="champion-body">
+          <div class="champion-meta">
+            <span class="champion-score">★ 9.8</span>
+            <span class="champion-price">14 modelos</span>
+          </div>
+          <h3 class="champion-name">Top fones TWS 2026</h3>
+          <p class="champion-highlight">
+            Ranking definitivo com os 14 modelos sem fio mais recomendados em todas as faixas de preço.
+          </p>
+          <a href="/melhores-fones-tws/" class="champion-cta">Ver ranking TWS &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Artigos Recentes & Rankings com Abas Interativas -->
+  <section class="site-container reviews-section" id="rankings">
+    <div class="section-header-modern">
+      <span class="section-tag">Bancada de avaliações</span>
+      <h2 class="section-title-modern">Rankings e guias detalhados</h2>
+      <p class="section-desc-modern">
+        Nossas análises aprofundadas com prós, contras, medições de bateria e comparativo de preços atualizado.
+      </p>
+
+      <!-- Abas de Filtro Instantâneo (Zero JS Bloat) -->
+      <div class="filter-tabs-wrap">
+        <button type="button" class="tab-btn is-active" data-filter="all">
+          <span>Todos os artigos</span>
+        </button>
+        <button type="button" class="tab-btn" data-filter="ranking">
+          <span>🏆 Rankings de compra</span>
+        </button>
+        <button type="button" class="tab-btn" data-filter="duvida">
+          <span>💡 Dúvidas e tutoriais</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid de Posts -->
+    <div class="posts-grid" id="main-posts-grid">
+      {recentPosts.map((post: any) => {
+        const isDuvida = post.categories?.includes(21);
+        const filterType = isDuvida ? 'duvida' : 'ranking';
+        return (
+          <div class="post-card-filter-item" data-category={filterType}>
+            <PostCard post={post} />
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="reviews-pagination-cta">
+      <a href="/melhores/" class="hero-cta-btn" style="background: var(--color-slate-900); box-shadow: var(--shadow-md);">
+        <span>Explorar todos os 73 artigos e rankings</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Prova Social & Na Mídia -->
+  <section class="media-proof-section">
+    <div class="site-container">
+      <div class="media-proof-header">
+        <span class="media-proof-title">Reconhecido e citado por grandes portais de tecnologia</span>
+      </div>
+      <div class="media-proof-logos">
+        <img
+          src="https://melhoresfones.com/wp-content/uploads/2024/12/Logo-dos-parceiros-do-melhores-fones.webp"
+          alt="Parceiros e citações na mídia do Melhores Fones"
+          width="805"
+          height="159"
+          loading="lazy"
+          decoding="async"
+          class="media-logos-img"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Metodologia de Testes do Áudio Lab (4 Pilares) -->
+  <section class="site-container lab-methodology-section">
+    <div class="section-header-modern">
+      <span class="section-tag">Rigor científico</span>
+      <h2 class="section-title-modern">Como testamos fones no laboratório</h2>
+      <p class="section-desc-modern">
+        Cada produto passa por uma bateria padronizada de testes antes de receber uma nota editorial.
+      </p>
+    </div>
+
+    <div class="methodology-grid">
+      <div class="methodology-card">
+        <div class="methodology-icon">🔊</div>
+        <h3>1. Balanço tonal e graves</h3>
+        <p>Avaliamos clareza em agudos, detalhamento de médios e se os subgraves não abafam as vozes em faixas de teste de alta fidelidade.</p>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-icon">🔋</div>
+        <h3>2. Autonomia real sob estresse</h3>
+        <p>Medimos a duração da bateria em reprodução contínua a 75dB de volume com ANC ativado e desativado, sem confiar apenas nos números do fabricante.</p>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-icon">🔇</div>
+        <h3>3. Atenuação acústica ANC</h3>
+        <p>Testamos o cancelamento ativo de ruído em ambientes de transporte público, cafeterias e ruídos de baixa frequência de motores de avião.</p>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-icon">🏃</div>
+        <h3>4. Conforto e estabilidade</h3>
+        <p>Sessões de 4 horas ininterruptas e treinos de corrida para garantir que o fone não causa fadiga no canal auditivo e não cai da orelha.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a Especialista & Transparência -->
+  <section class="site-container author-showcase-section">
+    <div class="author-featured-card">
+      <div class="author-featured-grid">
+        <div class="author-featured-media">
+          <div class="author-avatar-container">
+            <img
+              src="https://melhoresfones.com/wp-content/uploads/2024/03/Bianca-Haru-1024x1024.webp"
+              alt="Bianca Haru - Especialista e Editora Chefe"
+              width="260"
+              height="260"
+              loading="lazy"
+              decoding="async"
+              class="author-avatar-large"
+              onerror="this.src='https://secure.gravatar.com/avatar/911d262c03578ea2cd44946c0fcbd8b37e483b30c876a28b699d8ef741511314?s=300&d=mm&r=g'"
+            />
+            <span class="author-verified-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Verificada</span>
+            </span>
+          </div>
+          <h3 class="author-name-title">Bianca Haru</h3>
+          <span class="author-title-sub">Jornalista USP &bull; Especialista em áudio</span>
+        </div>
+
+        <div class="author-featured-text">
+          <span class="section-tag">Transparência e metodologia</span>
+          <h2 class="author-heading">
+            Por trás de cada teste, horas reais de uso e escuta crítica.
+          </h2>
+          <p class="author-paragraph">
+            Sou <strong>Bianca Haru</strong>, formada em Jornalismo pela USP e apaixonada por tecnologia de som. Ao longo de mais de 7 anos, já avaliei centenas de fones de ouvido em mais de 8 países para entregar análises práticas, diretas e sem termos técnicos vazios.
+          </p>
+
+          <div class="author-stats-mini">
+            <div class="stat-box">
+              <strong>+100</strong>
+              <span>Fones testados</span>
+            </div>
+            <div class="stat-box">
+              <strong>8+</strong>
+              <span>Países visitados</span>
+            </div>
+            <div class="stat-box">
+              <strong>7+ anos</strong>
+              <span>De experiência</span>
+            </div>
+          </div>
+
+          <div class="author-cta-row">
+            <a href="/time-melhores-fones/" class="hero-cta-btn" style="background: var(--color-slate-900);">
+              <span>Conhecer equipe editorial</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+            <a href="/sobre/" class="filter-pill" style="padding: 0.85rem 1.4rem;">
+              <span>Saiba como operamos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Alerta de Ofertas -->
+  <section class="site-container" style="margin-bottom: 6rem;">
+    <div class="deals-alert-box">
+      <div class="deals-alert-content">
+        <span class="section-tag" style="background: rgba(255, 255, 255, 0.2); color: #ffffff;">Alerta de economia</span>
+        <h2 class="deals-title">Economize na compra do seu próximo fone</h2>
+        <p class="deals-desc">
+          Monitoramos quedas de preço na Amazon e principais varejistas diariamente. Salve nosso site nos favoritos ou pesquise o modelo que procura antes de fechar pedido.
+        </p>
+        <div class="deals-action-row">
+          <button type="button" class="deals-btn" onclick="if(window.openSearchModal) window.openSearchModal();">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Pesquisar menor preço de fones</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para Abas de Filtro Instantâneo -->
+  <script is:inline>
+    (function() {
+      const tabBtns = document.querySelectorAll('.filter-tabs-wrap .tab-btn');
+      const cards = document.querySelectorAll('.post-card-filter-item');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || filter === cat) {
+              card.style.display = 'block';
+              card.style.opacity = '0';
+              setTimeout(() => {
+                card.style.transition = 'opacity 0.25s ease';
+                card.style.opacity = '1';
+              }, 10);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</BaseLayout>

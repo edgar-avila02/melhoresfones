@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Página não encontrada (404) - Melhores fones"
+  description="A página que você está procurando não foi encontrada ou foi movida."
+>
+  <div class="site-container" style="padding: 6rem 1.25rem; text-align: center;">
+    <span style="font-size: 5rem; font-weight: 900; color: var(--color-primary); display: block; line-height: 1;">404</span>
+    <h1 style="font-size: 2rem; font-weight: 800; color: var(--color-slate-900); margin: 1.5rem 0 1rem;">
+      Página não encontrada
+    </h1>
+    <p style="font-size: 1.15rem; color: var(--color-slate-600); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.6;">
+      O link que você seguiu pode estar quebrado ou a página pode ter sido removida. Não se preocupe, você pode navegar pelos nossos rankings e artigos!
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="/" class="hero-cta-btn" style="display: inline-flex;">
+        Ir para a página inicial
+      </a>
+      <a href="/melhores/" class="hero-cta-btn" style="display: inline-flex; background: var(--color-slate-900);">
+        Explorar melhores fones
+      </a>
+    </div>
+  </div>
+</BaseLayout>

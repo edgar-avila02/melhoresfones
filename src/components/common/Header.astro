@@ -1,0 +1,137 @@
+---
+import SearchModal from './SearchModal.astro';
+
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/';
+const isMelhores = currentPath.startsWith('/melhores/');
+const isDuvidas = currentPath.startsWith('/duvidas/');
+const isTime = currentPath.startsWith('/time-melhores-fones/');
+const isSobre = currentPath.startsWith('/sobre/');
+const isContato = currentPath.startsWith('/contato/');
+---
+
+<header class="site-header" id="masthead">
+  <div class="site-container header-inner">
+    <!-- Brand Logo Moderno -->
+    <a href="/" class="site-logo" title="Melhores Fones - Início">
+      <div class="logo-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+        </svg>
+      </div>
+      <div class="logo-text-group">
+        <span class="logo-brand-title">MELHORES<span class="logo-highlight">FONES</span></span>
+        <span class="logo-brand-sub">Áudio lab &bull; Testes reais</span>
+      </div>
+    </a>
+
+    <!-- Botão de Busca Rápida Desktop (Sem sobreposição, limpo) -->
+    <button type="button" class="header-search-trigger" onclick="if(window.openSearchModal) window.openSearchModal();" aria-label="Buscar fones e reviews">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span class="search-trigger-text">Buscar fone, modelo...</span>
+    </button>
+
+    <!-- Navegação Principal com Estilo Pill Linear -->
+    <input type="checkbox" id="nav-toggle" class="mobile-toggle-input" aria-label="Abrir menu" />
+    <label for="nav-toggle" class="mobile-toggle-label" aria-label="Menu principal">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegação Principal">
+      <ul class="nav-menu">
+        <li>
+          <a href="/melhores/" class={`nav-link ${isMelhores ? 'active' : ''}`}>
+            🏆 Rankings 2026
+          </a>
+        </li>
+        <li>
+          <a href="/duvidas/" class={`nav-link ${isDuvidas ? 'active' : ''}`}>
+            💡 Dúvidas e guias
+          </a>
+        </li>
+        <li>
+          <a href="/time-melhores-fones/" class={`nav-link ${isTime ? 'active' : ''}`}>
+            Especialistas
+          </a>
+        </li>
+        <li>
+          <a href="/sobre/" class={`nav-link ${isSobre ? 'active' : ''}`}>
+            Sobre nós
+          </a>
+        </li>
+        <li>
+          <a href="/contato/" class={`nav-link ${isContato ? 'active' : ''}`}>
+            Contato
+          </a>
+        </li>
+      </ul>
+
+      <!-- CTA adicional no menu mobile -->
+      <div class="mobile-nav-cta">
+        <a href="/melhores/" class="header-cta-btn mobile-cta-btn">
+          <span class="cta-pulse"></span>
+          <span>Top escolhas 2026</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Área de Ações do Header (Busca Mobile + CTA Desktop) -->
+    <div class="header-actions">
+      <!-- Botão de busca mobile -->
+      <button type="button" class="header-search-mobile-btn" onclick="if(window.openSearchModal) window.openSearchModal();" aria-label="Abrir pesquisa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
+      <a href="/melhores/" class="header-cta-btn">
+        <span class="cta-pulse"></span>
+        <span>Top escolhas 2026</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<SearchModal />
+
+<script is:inline>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (!toggle || !nav) return;
+
+    // Fechar menu ao clicar em qualquer link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.checked = false;
+      });
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+      if (toggle.checked && !nav.contains(e.target) && e.target !== toggle && !e.target.closest('.mobile-toggle-label')) {
+        toggle.checked = false;
+      }
+    });
+
+    // Fechar com tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toggle.checked) {
+        toggle.checked = false;
+      }
+    });
+  })();
+</script>

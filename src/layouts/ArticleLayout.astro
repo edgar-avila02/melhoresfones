@@ -1,0 +1,212 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AuthorBox from '../components/blog/AuthorBox.astro';
+import PostCard from '../components/blog/PostCard.astro';
+import { cleanContent, getFeaturedImage, formatDate, posts, categories } from '../utils/content.js';
+
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+const cleanTitle = post.title?.rendered || '';
+const rawExcerpt = post.excerpt?.rendered || '';
+const cleanExcerpt = rawExcerpt.replace(/<[^>]+>/g, '').trim() || "Confira a análise completa e detalhes sobre este fone de ouvido.";
+const featuredImg = getFeaturedImage(post);
+const cleanedHtml = cleanContent(post.content?.rendered || '');
+
+// Find primary category
+const primaryCatId = post.categories && post.categories[0];
+const categoryObj = categories.find((c: any) => c.id === primaryCatId);
+const categoryName = categoryObj ? categoryObj.name : 'Melhores';
+const categorySlug = categoryObj ? categoryObj.slug : 'melhores';
+const isDuvida = primaryCatId === 21;
+
+// Reading time estimate
+const wordCount = (post.content?.rendered || '').split(/\s+/).length;
+const readTime = Math.max(3, Math.ceil(wordCount / 220));
+
+// Related posts (same category, excluding current post)
+const relatedPosts = posts
+  .filter((p: any) => p.id !== post.id && p.categories?.includes(primaryCatId))
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={cleanTitle}
+  description={cleanExcerpt}
+  type="article"
+  image={featuredImg}
+  publishedTime={post.date}
+  modifiedTime={post.modified}
+>
+  <!-- Barra de Progresso de Leitura Fixa no Topo -->
+  <div id="reading-progress-bar" class="reading-progress-bar" aria-hidden="true"></div>
+
+  <article class="article-container">
+    <header class="article-header-modern">
+      <!-- Breadcrumbs Modernos -->
+      <nav class="breadcrumbs" aria-label="Trilha de navegação">
+        <a href="/" class="breadcrumb-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          </svg>
+          <span>Início</span>
+        </a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <a href={`/${categorySlug}/`} class="breadcrumb-item">{categoryName}</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span aria-current="page" class="breadcrumb-current" set:html={cleanTitle} />
+      </nav>
+
+      <!-- Badge de Categoria & Status -->
+      <div class="article-badge-row">
+        <span class={`article-category-badge ${isDuvida ? 'badge-duvida' : 'badge-ranking'}`}>
+          {isDuvida ? '💡 Guia prático e dúvidas' : '🏆 Ranking e teste 2026'}
+        </span>
+        <span class="article-test-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Metodologia imparcial</span>
+        </span>
+      </div>
+
+      <h1 class="article-title" set:html={cleanTitle} />
+
+      <!-- Meta Card Moderno com Autor Verificado -->
+      <div class="article-meta-card">
+        <div class="author-chip">
+          <img
+            src="https://secure.gravatar.com/avatar/911d262c03578ea2cd44946c0fcbd8b37e483b30c876a28b699d8ef741511314?s=96&d=mm&r=g"
+            alt="Bianca Haru"
+            class="author-chip-avatar"
+            width="46"
+            height="46"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="author-chip-info">
+            <div class="author-name-row">
+              <strong>Bianca Haru</strong>
+              <span class="author-badge-verified" title="Especialista verificada">✓</span>
+            </div>
+            <span>Especialista em áudio &bull; USP</span>
+          </div>
+        </div>
+
+        <div class="article-meta-details">
+          <div class="meta-item">
+            <span class="meta-label">Atualizado:</span>
+            <strong class="meta-value">
+              <time datetime={post.modified || post.date}>{formatDate(post.modified || post.date)}</time>
+            </strong>
+          </div>
+
+          <div class="meta-divider"></div>
+
+          <div class="meta-item">
+            <span class="meta-label">Leitura:</span>
+            <strong class="meta-value">{readTime} min</strong>
+          </div>
+
+          <div class="meta-divider"></div>
+
+          <button type="button" class="article-share-btn" id="copy-link-btn" title="Copiar link do artigo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            <span id="copy-btn-text">Compartilhar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Imagem de Destaque com Moldura Moderna -->
+      {featuredImg && (
+        <div class="article-featured-image-wrap">
+          <img
+            src={featuredImg.url}
+            alt={featuredImg.alt || cleanTitle}
+            width={featuredImg.width || 1200}
+            height={featuredImg.height || 800}
+            fetchpriority="high"
+            decoding="async"
+            class="article-featured-img"
+            onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"
+          />
+        </div>
+      )}
+    </header>
+
+    <!-- Transparência Editorial Pré-Artigo -->
+    <div class="editorial-notice-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="notice-icon">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <p>
+        <strong>Compromisso de independência:</strong> Compramos ou requisitamos unidades de teste sem qualquer interferência de fabricantes. Ao comprar através dos links recomendados, podemos receber uma pequena comissão que mantém nosso laboratório no ar, sem nenhum custo extra para você.
+      </p>
+    </div>
+
+    <!-- Conteúdo Sanitizado do Artigo -->
+    <div class="article-content" set:html={cleanedHtml} />
+
+    <!-- Box de Autor com Credenciais -->
+    <AuthorBox />
+
+    <!-- Artigos Relacionados em Grid Moderno -->
+    {relatedPosts.length > 0 && (
+      <section class="related-articles-section">
+        <div class="section-header-modern">
+          <span class="section-tag">Continue explorando</span>
+          <h2 class="section-title-modern">Artigos relacionados</h2>
+          <p class="section-desc-modern">Mais testes e comparativos na mesma categoria para tirar todas as suas dúvidas.</p>
+        </div>
+        <div class="posts-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          {relatedPosts.map((related: any) => (
+            <PostCard post={related} />
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+
+  <!-- Script de Progresso de Leitura e Compartilhamento -->
+  <script is:inline>
+    (function() {
+      // Reading progress bar
+      const bar = document.getElementById('reading-progress-bar');
+      if (bar) {
+        window.addEventListener('scroll', () => {
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalHeight > 0) {
+            const progress = (window.scrollY / totalHeight) * 100;
+            bar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+          }
+        }, { passive: true });
+      }
+
+      // Copy link button
+      const copyBtn = document.getElementById('copy-link-btn');
+      const copyText = document.getElementById('copy-btn-text');
+      if (copyBtn && copyText) {
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            copyText.textContent = 'Link copiado!';
+            copyBtn.classList.add('is-copied');
+            setTimeout(() => {
+              copyText.textContent = 'Compartilhar';
+              copyBtn.classList.remove('is-copied');
+            }, 2500);
+          } catch (e) {
+            console.error('Falha ao copiar:', e);
+          }
+        });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  name?: string;
+  bio?: string;
+}
+
+const {
+  name = "Bianca Haru",
+  bio = "Formada em Jornalismo pela USP e especialista independente em áudio há mais de 7 anos. Já testou mais de uma centena de fones, headphones e fones TWS em mais de 8 países, fornecendo análises honestas e focadas no melhor custo-benefício para seus ouvidos."
+} = Astro.props;
+---
+
+<div class="author-box-modern">
+  <div class="author-avatar-wrap">
+    <img
+      src="https://secure.gravatar.com/avatar/911d262c03578ea2cd44946c0fcbd8b37e483b30c876a28b699d8ef741511314?s=180&d=mm&r=g"
+      alt={name}
+      class="author-avatar-img"
+      width="90"
+      height="90"
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="author-verified-badge" title="Autora verificada">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </span>
+  </div>
+
+  <div class="author-details">
+    <span class="author-role">Especialista editorial</span>
+    <h3>{name}</h3>
+    <p class="author-bio">{bio}</p>
+  </div>
+</div>

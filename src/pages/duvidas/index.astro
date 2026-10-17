@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/blog/PostCard.astro';
+import { posts } from '../../utils/content.js';
+
+const categoryPosts = posts.filter((p: any) => p.categories?.includes(21));
+---
+
+<BaseLayout
+  title="Dúvidas e tutoriais sobre fones de ouvido"
+  description="Bem-vindo à categoria de Dúvidas! Nosso time reuniu as principais perguntas e tutoriais passo a passo sobre fones de ouvido."
+  canonical="https://melhoresfones.com/duvidas/"
+>
+  <div class="site-container" style="padding-top: 4rem; padding-bottom: 6rem;">
+    <header class="section-header-modern" style="margin-bottom: 3.5rem;">
+      <nav class="breadcrumbs" style="justify-content: center; margin-bottom: 1.25rem;">
+        <a href="/">Início</a>
+        <span>&rsaquo;</span>
+        <span aria-current="page">Dúvidas</span>
+      </nav>
+      <span class="section-tag" style="background-color: #eff6ff; color: #2563eb;">Tutoriais e dicas</span>
+      <h1 class="section-title-modern">Dúvidas e guias práticos</h1>
+      <p class="section-desc-modern">
+        Respostas diretas, dicas de manutenção, tutoriais de emparelhamento e soluções para os problemas mais comuns dos seus fones de ouvido.
+      </p>
+    </header>
+
+    <div class="posts-grid">
+      {categoryPosts.map((post: any) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

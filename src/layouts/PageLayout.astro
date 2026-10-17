@@ -1,0 +1,29 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { cleanContent } from '../utils/content.js';
+
+interface Props {
+  title: string;
+  description?: string;
+  content?: string;
+}
+
+const { title, description, content } = Astro.props;
+const cleanedHtml = content ? cleanContent(content) : '';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="article-container" style="padding-top: 3.5rem; padding-bottom: 5rem;">
+    <header style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem;">
+      <h1 class="article-title" set:html={title} />
+    </header>
+
+    {content ? (
+      <div class="article-content" set:html={cleanedHtml} />
+    ) : (
+      <div class="article-content">
+        <slot />
+      </div>
+    )}
+  </div>
+</BaseLayout>
