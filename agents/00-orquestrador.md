@@ -2,9 +2,9 @@
 
 Este documento é o guia de operação e comando rápido da esteira automatizada de produção de conteúdo do portal **Melhores Fones**. Ele integra e comanda os 3 agentes da pasta `agents/`:
 
-1. `01-pesquisador.md` (Pesquisa SERP no Google, análise de 5 concorrentes, média + 25% de palavras, matriz de similaridade de produtos, coleta de imagens e pauta Outline).
-2. `02-redator.md` (Redação técnica audiófila com layout idêntico ao site: imagens de produtos, prós/contras com emojis e botões CTA de afiliados).
-3. `03-revisor-publicador.md` (Humanização, ajuste exato de 50-60 chars no Title e 120-140 na Description, auditoria de links/imagens e salvamento em `src/content/posts/[slug].md`).
+1. `01-pesquisador.md` (Pesquisa SERP no Google, análise de 5 concorrentes, média + 25% de palavras, similaridade de produtos e pauta Outline).
+2. `02-redator.md` (Redação técnica audiófila com **mínimo de 3 imagens contextuais**, **capa de alto impacto para o Google**, **vídeo do YouTube incorporado** e layout idêntico ao site).
+3. `03-revisor-publicador.md` (Humanização, ajuste exato de 50-60 chars no Title e 120-140 na Description, auditoria das 3 imagens + vídeo e salvamento em `src/content/posts/[slug].md`).
 
 ---
 
@@ -23,61 +23,48 @@ Execute a esteira da pasta agents para a palavra-chave: [SUA PALAVRA-CHAVE AQUI]
   ```
 - **Artigo de Dúvida / Tutorial:**
   ```text
-  Execute a esteira da pasta agents para a palavra-chave: como conectar fone bluetooth jbl no notebook
+  Execute a esteira da pasta agents para a palavra-chave: como resetar fone bluetooth
   ```
 
 ---
 
-## 🔄 Fluxo de Execução com Checkpoint de Afiliados
-
-O fluxo se adapta inteligentemente ao tipo de intenção de busca da palavra-chave:
+## 🔄 Fluxo de Execução com Checkpoint de Afiliados & Multimídia
 
 ```mermaid
 graph TD
     A["Comando no Chat com Palavra-Chave"] --> B["Etapa 1: Agente 01 (Pesquisador)"]
-    B -->|"Analisa 5 Concorrentes + Similaridade + Imagens"| C{"O Artigo é Comercial?"}
+    B -->|"Analisa 5 Concorrentes + Média +25% + Outline"| C{"O Artigo é Comercial?"}
     
     C -- Sim --> D["🛑 CHECKPOINT NO CHAT: Assistente apresenta lista de produtos e solicita os Links de Afiliado ao usuário"]
-    D -->|"Usuário envia os Links de Afiliado"| E["Etapa 2: Agente 02 (Redator)"]
+    D -->|"Usuário envia os Links de Afiliado"| E["Etapa 2: Agente 02 (Redator Multimídia)"]
     
     C -- Não (Dúvida/Tutorial) --> E
     
-    E -->|"Redige com Layout Oficial do Site (Imagens + Prós/Contras + Botão CTA)"| F["Etapa 3: Agente 03 (Revisor &amp; Publicador)"]
-    F -->|"Humanização + Title 50-60ch + Desc 120-140ch + Frontmatter"| G["Salva em src/content/posts/[slug].md"]
+    E -->|"Redige artigo com Mínimo 3 Imagens + Capa Google + Vídeo YouTube"| F["Etapa 3: Agente 03 (Revisor &amp; Publicador)"]
+    F -->|"Humanização + Title 50-60ch + Desc 120-140ch + Auditoria Multimídia"| G["Salva em src/content/posts/[slug].md"]
     G --> H["Relatório Final de Auditoria no Chat"]
 ```
 
 ---
 
-### O que Acontece em Cada Etapa:
+### Regras Mandatórias de Cada Etapa:
 
 #### 1. Pesquisa & Pauta (Agente 01)
 - Abre o navegador integrado, descarta lojas e fóruns até encontrar **5 artigos de blog concorrentes válidos**.
-- Mapeia a **similaridade de produtos** (quais modelos mais se repetem entre os concorrentes) e seleciona a lista definitiva.
-- Coleta as **URLs das imagens oficiais** de cada fone.
+- Mapeia a **similaridade de produtos** (se comercial) ou os pontos críticos da dúvida (se informacional).
 - Calcula a **Meta de Palavras** (média dos concorrentes $+25\%$).
 
-#### 2. Checkpoint de Links de Afiliados (Interação Humana)
-- Se o artigo for comercial, o assistente lista os fones e as imagens no chat e solicita:
-  > *"Por favor, me envie os links de afiliado para os produtos acima."*
-- Assim que você colar os links no chat, o assistente prossegue automaticamente para as etapas 02 e 03.
+#### 2. Checkpoint de Links de Afiliados (Se Comercial)
+- Se o artigo for comercial, pausa no chat, lista os modelos e aguarda você enviar os links de afiliados.
 
-#### 3. Redação Técnica no Padrão Visual do Site (Agente 02)
-- Segue rigorosamente o layout e a identidade visual de referência do **Melhores Fones**:
-  - Imagem do produto em `<div class="wp-block-image"><figure><img ... /></figure></div>`.
-  - Análise profunda: palco sonoro, resposta de frequência, drivers, ANC, codecs e autonomia real.
-  - Listas de `#### Prós:` (`✅`) e `#### Contras:` (`❌`).
-  - Botão CTA estilizado com seu link de afiliado:
-    ```html
-    <div class="wp-block-buttons">
-      <div class="wp-block-button">
-        <a class="wp-block-button__link" href="SEU_LINK" target="_blank" rel="nofollow noopener">Ver preço</a>
-      </div>
-    </div>
-    ```
+#### 3. Redação Multimídia no Padrão Visual do Site (Agente 02)
+- **Capa Específica e Atraente:** Imagem de altíssima qualidade técnica para o Google (nunca logo genérica).
+- **Mínimo de 3 Imagens com Contexto:** Capa $+ 2$ imagens no corpo do post ilustrando os passos práticos ou detalhes técnicos.
+- **Vídeo do YouTube Incorporado:** Container responsivo 16:9 com tutorial ou review explicativo.
+- **Se Comercial:** Botões CTA de afiliado com `.wp-block-button__link` e `rel="nofollow noopener"`.
 
 #### 4. Humanização, SEO e Publicação (Agente 03)
 - Remove clichês de IA.
 - Calibra a Meta Title (50 a 60 caracteres) e a Meta Description (120 a 140 caracteres).
+- Audita a presença da capa temática, das imagens contextuais e do vídeo funcional.
 - Salva o arquivo `.md` diretamente em `src/content/posts/[slug].md` com Frontmatter completo.
-- Entrega o relatório de publicação no chat.

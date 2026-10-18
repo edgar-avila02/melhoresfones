@@ -5,8 +5,8 @@ pubDate: "2026-10-18"
 modDate: "2026-10-18"
 category: "duvidas"
 author: "Bianca Haru"
-image: "/wp-content/uploads/2024/03/Logo-do-melhores-fones.webp"
-imageAlt: "Como resetar fone de ouvido bluetooth passo a passo"
+image: "/images/posts/como-resetar-fone-bluetooth/capa.jpg"
+imageAlt: "Fones de ouvido bluetooth dentro do estojo de carregamento com luzes indicadoras de reset ativas"
 slug: "como-resetar-fone-bluetooth"
 tags:
   - "fone bluetooth"
@@ -30,6 +30,23 @@ Para realizar o reset universal da maioria dos fones sem fio (TWS ou headphones)
 4. **Reinicie no estojo:** Coloque os dois fones de volta dentro da case de carregamento por 10 segundos, feche a tampa e retire-os juntos. Reative o Bluetooth do celular e refaça o pareamento do zero.
 
 Se o seu modelo possui particularidades de fábrica, veja abaixo o procedimento específico de acordo com a construção do seu aparelho.
+
+---
+
+## Vídeo tutorial: Como resetar qualquer fone Bluetooth na prática
+
+Para quem prefere acompanhar o procedimento em vídeo com a demonstração visual das luzes e do tempo de toque nos sensores, assista ao tutorial prático abaixo:
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 14px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/Mn7MJTJ-Bds" 
+    title="Tutorial em vídeo: Como resetar qualquer fone de ouvido Bluetooth" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    loading="lazy">
+  </iframe>
+</div>
 
 ---
 
@@ -67,6 +84,13 @@ Modelos mais modernos ou avançados concentram o comando de restauração direta
 
 A maior parte dos fones de ótimo custo-benefício não possui botão na case. Nesses modelos, o reset é executado combinando toques nos próprios fones.
 
+<div class="wp-block-image">
+  <figure>
+    <img src="/images/posts/como-resetar-fone-bluetooth/reset-toque.jpg" alt="Pressionando sensores de toque de ambos os fones sem fio simultaneamente para resetar" loading="lazy" decoding="async" />
+    <figcaption style="text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">Segurar os sensores de toque de ambos os lados simultaneamente por 20 segundos restaura o pareamento de fábrica.</figcaption>
+  </figure>
+</div>
+
 ### Passo a passo detalhado:
 1. No seu celular, acesse *Configurações > Bluetooth*, toque na engrenagem ao lado do nome do fone e selecione **"Desemparelhar"**.
 2. Retire os dois fones da case. Mantenha o dedo pressionado sobre os sensores de toque de ambos por 5 segundos até ouvir o aviso de desligamento ("Power Off") ou os LEDs se apagarem.
@@ -97,7 +121,15 @@ Em headphones de arco (fones de concha que cobrem a orelha), como JBL Tune 510BT
 Se você seguiu todos os passos acima e o fone insiste em não conectar ou continuar mudo de um lado, a causa quase sempre está em um dos quatro fatores a seguir:
 
 ### 1. Sujeira ou oxidação nos contatos magnéticos (Pogo Pins)
-Dentro da caixinha e na ponta da haste dos fones existem pequenos pinos metálicos dourados responsáveis pela condução elétrica e pelos pulsos de dados. Suor seco, poeira e oleosidade criam uma camada invisível de isolamento.
+Dentro da caixinha e na ponta da haste dos fones existem pequenos pinos metálicos dourados responsáveis pela condução elétrica e pelos pulsos de dados. Suor seco, poeira e oleosidade criam uma camada invisível de isolamento que impede o fone de carregar ou de reconhecer o comando de ciclo de energia.
+
+<div class="wp-block-image">
+  <figure>
+    <img src="/images/posts/como-resetar-fone-bluetooth/limpeza-contatos.jpg" alt="Limpeza minuciosa dos contatos magnéticos dourados do fone de ouvido com cotonete" loading="lazy" decoding="async" />
+    <figcaption style="text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">Limpar os pinos magnéticos de carregamento com cotonete seco remove oleosidade e sujeira que impedem a recarga e o reset.</figcaption>
+  </figure>
+</div>
+
 - **Como resolver:** Umedeça levemente a ponta de um cotonete em álcool isopropílico (ou use um pano de microfibra seco) e friccione com delicadeza sobre os contatos de metal do fone e do fundo do estojo. Deixe secar por 2 minutos antes de recolocar os fones.
 
 ### 2. Bateria desbalanceada ou descarga profunda
