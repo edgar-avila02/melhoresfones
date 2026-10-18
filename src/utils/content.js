@@ -1,7 +1,67 @@
-import posts from '../data/posts.json' with { type: 'json' };
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
+import yaml from 'yaml';
+import rawPosts from '../data/posts.json' with { type: 'json' };
 import pages from '../data/pages.json' with { type: 'json' };
 import categories from '../data/categories.json' with { type: 'json' };
 import media from '../data/media.json' with { type: 'json' };
+
+function loadMarkdownPosts() {
+  const postsDir = path.resolve('src/content/posts');
+  if (!fs.existsSync(postsDir)) return [];
+
+  const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+  const mdPosts = [];
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const fullPath = path.join(postsDir, file);
+    const fileContent = fs.readFileSync(fullPath, 'utf-8');
+
+    const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+    if (!match) continue;
+
+    const rawYaml = match[1];
+    const rawBody = match[2];
+    let frontmatter = {};
+    try {
+      frontmatter = yaml.parse(rawYaml) || {};
+    } catch (e) {
+      console.error(`Erro ao processar frontmatter de ${file}:`, e);
+      continue;
+    }
+
+    const slug = frontmatter.slug || file.replace(/\.(md|mdx)$/, '');
+    const title = frontmatter.title || slug;
+    const description = frontmatter.description || '';
+    const category = frontmatter.category === 'duvidas' ? 21 : 17;
+    const date = frontmatter.pubDate || new Date().toISOString();
+    const modified = frontmatter.modDate || date;
+    const renderedHtml = marked.parse(rawBody);
+
+    mdPosts.push({
+      id: 99000 + i,
+      date,
+      modified,
+      slug,
+      status: 'publish',
+      type: 'post',
+      title: { rendered: title },
+      content: { rendered: renderedHtml },
+      excerpt: { rendered: `<p>${description}</p>` },
+      categories: [category],
+      featured_media: null,
+      featured_image_url: frontmatter.image || '/wp-content/uploads/2024/03/Logo-do-melhores-fones.webp',
+      featured_image_alt: frontmatter.imageAlt || title
+    });
+  }
+
+  return mdPosts;
+}
+
+const markdownPosts = loadMarkdownPosts();
+const posts = [...markdownPosts, ...rawPosts];
 
 export { posts, pages, categories, media };
 
@@ -94,6 +154,14 @@ export function cleanContent(html) {
 }
 
 export function getFeaturedImage(item) {
+  if (item.featured_image_url) {
+    return {
+      url: item.featured_image_url,
+      alt: item.featured_image_alt || item.title?.rendered || '',
+      width: 1200,
+      height: 800
+    };
+  }
   if (item.featured_media && media[item.featured_media]) {
     const m = media[item.featured_media];
     return {
