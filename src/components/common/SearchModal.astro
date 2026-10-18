@@ -183,7 +183,7 @@ const searchData = posts.map((p: any) => {
 
       const html = filtered.map(item => `
         <a href="${item.url}" class="search-result-item" role="option">
-          <img src="${item.image}" alt="${item.title}" class="search-result-thumb" loading="lazy" width="64" height="64" onerror="this.src='https://melhoresfones.com/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"/>
+          <img src="${item.image}" alt="${item.title}" class="search-result-thumb" loading="lazy" width="64" height="64" onerror="this.src='/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"/>
           <div class="search-result-info">
             <div class="search-result-top">
               <span class="search-result-badge ${item.category === 'Dúvidas' ? 'badge-duvida' : 'badge-melhores'}">${item.category}</span>

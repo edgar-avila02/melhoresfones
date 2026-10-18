@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//melhoresfones.com/main-sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<sitemap>
+		<loc>https://melhoresfones.com/post-sitemap.xml</loc>
+		<lastmod>2026-01-09T22:02:33+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://melhoresfones.com/page-sitemap.xml</loc>
+		<lastmod>2025-04-29T02:13:02+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://melhoresfones.com/category-sitemap.xml</loc>
+		<lastmod>2026-01-09T22:02:33+00:00</lastmod>
+	</sitemap>
+</sitemapindex>

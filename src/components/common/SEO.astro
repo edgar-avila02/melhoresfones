@@ -38,6 +38,7 @@ if (!currentPath.endsWith('/')) {
 }
 const canonicalUrl = canonical || `${siteUrl}${currentPath}`;
 const formattedTitle = title.toLowerCase().includes("melhores fones") ? title : `${title} - Melhores fones`;
+const fullImageUrl = (image.url || '').startsWith('http') ? image.url : `${siteUrl}${image.url}`;
 
 // Schema.org Graph
 const schemaGraph: any[] = [
@@ -90,7 +91,7 @@ if (type === 'article') {
     },
     "image": {
       "@type": "ImageObject",
-      "url": image.url,
+      "url": fullImageUrl,
       "width": image.width || 1200,
       "height": image.height || 800
     },
@@ -113,7 +114,7 @@ if (type === 'article') {
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:site_name" content="Melhores Fones" />
-<meta property="og:image" content={image.url} />
+<meta property="og:image" content={fullImageUrl} />
 {image.width && <meta property="og:image:width" content={String(image.width)} />}
 {image.height && <meta property="og:image:height" content={String(image.height)} />}
 {image.alt && <meta property="og:image:alt" content={image.alt} />}
@@ -126,12 +127,12 @@ if (type === 'article') {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={formattedTitle} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image.url} />
+<meta name="twitter:image" content={fullImageUrl} />
 
 <!-- Favicons & App Icons -->
-<link rel="icon" href="https://melhoresfones.com/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-32x32.webp" sizes="32x32" />
-<link rel="icon" href="https://melhoresfones.com/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-192x192.webp" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://melhoresfones.com/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-180x180.webp" />
+<link rel="icon" href="/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-32x32.webp" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-192x192.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2023/05/cropped-Melhores-fones-favicon-180x180.webp" />
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })} />

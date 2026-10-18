@@ -46,6 +46,11 @@ export function cleanContent(html) {
       }
     }
 
+    // Fallback onerror
+    if (!/onerror=/i.test(newAttrs)) {
+      newAttrs = ` onerror="this.src='/wp-content/uploads/2024/12/Icone-de-fone-de-ouvido.webp'"${newAttrs}`;
+    }
+
     // Native loading="lazy" and decoding="async"
     if (!/loading=/i.test(newAttrs)) {
       newAttrs = ` loading="lazy"${newAttrs}`;
@@ -81,7 +86,8 @@ export function cleanContent(html) {
   cleaned = cleaned.replace(/<p>\s*<p>\s*<\/p>\s*<\/p>/gi, '');
   cleaned = cleaned.replace(/<p>\s*<\/p>/gi, '');
 
-  // Ensure HTTPS on all internal URLs
+  // Ensure root-relative paths for all wp-content uploads
+  cleaned = cleaned.replace(/https?:\/\/melhoresfones\.com\/wp-content\/uploads\//gi, '/wp-content/uploads/');
   cleaned = cleaned.replace(/http:\/\/melhoresfones\.com/g, 'https://melhoresfones.com');
 
   return cleaned;
@@ -89,7 +95,11 @@ export function cleanContent(html) {
 
 export function getFeaturedImage(item) {
   if (item.featured_media && media[item.featured_media]) {
-    return media[item.featured_media];
+    const m = media[item.featured_media];
+    return {
+      ...m,
+      url: (m.url || '').replace(/^https?:\/\/melhoresfones\.com/, '')
+    };
   }
   // Try extracting first img tag
   if (item.content?.rendered) {
@@ -97,7 +107,7 @@ export function getFeaturedImage(item) {
     if (m && m[2]) {
       const altMatch = item.content.rendered.match(/<img[^>]+alt=(["'])(.*?)\1/i);
       return {
-        url: m[2].replace('http://', 'https://'),
+        url: m[2].replace(/^https?:\/\/melhoresfones\.com/, ''),
         alt: altMatch ? altMatch[2] : item.title?.rendered || '',
         width: 1200,
         height: 800
@@ -105,7 +115,7 @@ export function getFeaturedImage(item) {
     }
   }
   return {
-    url: 'https://melhoresfones.com/wp-content/uploads/2024/03/Logo-do-melhores-fones.webp',
+    url: '/wp-content/uploads/2024/03/Logo-do-melhores-fones.webp',
     alt: item.title?.rendered || 'Melhores Fones',
     width: 300,
     height: 300
