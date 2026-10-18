@@ -61,7 +61,8 @@ function loadMarkdownPosts() {
 }
 
 const markdownPosts = loadMarkdownPosts();
-const posts = [...markdownPosts, ...rawPosts];
+const mdSlugs = new Set(markdownPosts.map(p => p.slug));
+const posts = [...markdownPosts, ...rawPosts.filter(p => !mdSlugs.has(p.slug))];
 
 export { posts, pages, categories, media };
 
