@@ -12,6 +12,8 @@ const { post } = Astro.props;
 const cleanTitle = post.title?.rendered || '';
 const rawExcerpt = post.excerpt?.rendered || '';
 const cleanExcerpt = rawExcerpt.replace(/<[^>]+>/g, '').trim() || "Confira a análise completa e detalhes sobre este fone de ouvido.";
+const seoTitle = post.seo_title || cleanTitle;
+const seoDescription = post.seo_description || cleanExcerpt;
 const featuredImg = getFeaturedImage(post);
 const cleanedHtml = cleanContent(post.content?.rendered || '');
 
@@ -33,8 +35,8 @@ const relatedPosts = posts
 ---
 
 <BaseLayout
-  title={cleanTitle}
-  description={cleanExcerpt}
+  title={seoTitle}
+  description={seoDescription}
   type="article"
   image={featuredImg}
   publishedTime={post.date}

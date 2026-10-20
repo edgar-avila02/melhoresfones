@@ -35,6 +35,8 @@ function loadMarkdownPosts() {
     const slug = frontmatter.slug || file.replace(/\.(md|mdx)$/, '');
     const title = frontmatter.title || slug;
     const description = frontmatter.description || '';
+    const seoTitle = frontmatter.seoTitle || frontmatter.title || slug;
+    const seoDescription = frontmatter.seoDescription || frontmatter.description || '';
     const category = frontmatter.category === 'duvidas' ? 21 : 17;
     const date = frontmatter.pubDate || new Date().toISOString();
     const modified = frontmatter.modDate || date;
@@ -53,7 +55,9 @@ function loadMarkdownPosts() {
       categories: [category],
       featured_media: null,
       featured_image_url: frontmatter.image || '/wp-content/uploads/2024/03/Logo-do-melhores-fones.webp',
-      featured_image_alt: frontmatter.imageAlt || title
+      featured_image_alt: frontmatter.imageAlt || title,
+      seo_title: seoTitle,
+      seo_description: seoDescription
     });
   }
 

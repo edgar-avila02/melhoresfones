@@ -37,7 +37,9 @@ if (!currentPath.endsWith('/')) {
   currentPath += '/';
 }
 const canonicalUrl = canonical || `${siteUrl}${currentPath}`;
-const formattedTitle = title.toLowerCase().includes("melhores fones") ? title : `${title} - Melhores fones`;
+const formattedTitle = (type === 'article' || title.toLowerCase().includes("melhores fones"))
+  ? title
+  : `${title} - Melhores fones`;
 const fullImageUrl = (image.url || '').startsWith('http') ? image.url : `${siteUrl}${image.url}`;
 
 // Schema.org Graph
