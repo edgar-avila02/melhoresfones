@@ -64,28 +64,14 @@ const {
       gtag('config', 'G-NYRV2ER6BK');
     </script>
 
-    <!-- Smartlook Web SDK (carregamento sob demanda/idle para alta performance) -->
-    <script is:inline>
-      function initSmartlook() {
-        if (window._smartlookStarted) return;
-        window._smartlookStarted = true;
-        window.smartlook || (function(d) {
-          var o = smartlook = function() { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
-          var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
-          c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
+    <!-- Smartlook Web SDK -->
+    <script type="text/javascript" is:inline>
+      window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
         })(document);
-        smartlook('init', '64f331b2a0820cef006751bcabf88d37743a970f', { region: 'eu' });
-      }
-      if (typeof window !== 'undefined') {
-        ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'].forEach(function(evt) {
-          window.addEventListener(evt, initSmartlook, { passive: true, once: true });
-        });
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(function() { setTimeout(initSmartlook, 3000); });
-        } else {
-          setTimeout(initSmartlook, 3500);
-        }
-      }
+        smartlook('init', 'e03c71b18087f5f36d34a4202056b5c74ce34d90', { region: 'eu' });
     </script>
   </head>
   <body>
