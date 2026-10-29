@@ -118,7 +118,6 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 119,apple-airpods-terceira-geração,https://amzn.to/4aGjWPT,"Apple AirPods (3ª geração) com estojo de recarga Lightning ​​​​​​​ | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-05-29 15:54:29","2024-11-02 13:17:38",688,686
 120,samsung-galaxy-buds2-pro-grafite,https://amzn.to/4aB7DEx,samsung-galaxy-buds2-pro-grafite,,301,0,1,1,0,0,admin,"2024-05-29 15:57:14","2024-05-29 15:57:14",1493,1482
 121,xiaomi-redmi-airdots-3-cor-azul,https://amzn.to/3wMuejE,xiaomi-redmi-airdots-3-cor-azul,,301,0,1,1,0,0,admin,"2024-05-29 16:03:14","2024-05-29 16:03:14",798,798
-122,qcy-ht05-melobuds,https://amzn.to/456sM8u,qcy-ht05-melobuds,,301,0,1,1,0,0,admin,"2024-05-29 16:07:06","2024-05-29 16:07:06",1423,1410
 123,"jbl-endurance-peak 3",https://amzn.to/450M52G,"jbl-endurance-peak 3",,301,0,1,1,0,0,admin,"2024-05-29 16:08:39","2024-05-29 16:08:39",75,75
 124,"airpod- pro-2",https://amzn.to/4aLOVtD,"airpod- pro-2",,301,0,1,1,0,0,admin,"2024-05-29 16:12:14","2024-05-29 16:12:14",140,140
 125,sony-wh-1000xm4,https://amzn.to/3VmWnXR,"Headphone Sony WH-1000XM4 Preto sem fio Bluetooth e com Noise Cancelling (cancelamento de Ruído) | WH-1000XM4BMUC | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-01 00:58:39","2024-06-01 00:58:39",1608,1594
@@ -160,11 +159,8 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 161,jbl-live-pro-2,https://amzn.to/3xkCZBJ,jbl-live-pro-2,,301,0,1,1,0,0,admin,"2024-06-19 00:47:52","2024-06-19 00:47:52",1057,1054
 162,xiaomi-haylou-gt1-pro,https://amzn.to/4bfoE7f,xiaomi-haylou-gt1-pro,,301,0,1,1,0,0,admin,"2024-06-19 00:51:22","2024-06-19 00:51:22",350,348
 163,qcy-T1c,https://amzn.to/4c5F97b,"Fone de Ouvido - Bluetooth - QCY T1C - 2020 - Preto | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-19 23:12:54","2024-06-19 23:12:54",456,451
-164,qcy-t20,https://amzn.to/3xp4OZz,qcy-t20,,301,0,1,1,0,0,admin,"2024-06-19 23:15:56","2024-06-19 23:15:56",1184,1172
 165,qcy-t13-branco,https://amzn.to/3VzzxLs,qcy-t13-branco,,301,0,1,1,0,0,admin,"2024-06-19 23:18:52","2024-06-19 23:18:52",1478,1470
-166,qcy-ht07,https://amzn.to/4cjBa6S,qcy-ht07,,301,0,1,1,0,0,admin,"2024-06-19 23:22:47","2024-06-19 23:22:47",1443,1435
 167,qcy-h2-pro,https://amzn.to/4klNac5,qcy-h2-pro,,301,0,1,1,0,0,admin,"2024-06-19 23:25:32","2025-05-13 00:16:59",862,858
-168,qcy-h3,https://amzn.to/3VPuVlO,"QCY H3 ANC Fone de Ouvido Bluetooth, Cancelamento de Ruído Ativo Headphone Bluetooth 5.4 Headset com Microfone, Certificação Hi-Res Audio, Conexão Multipontos, 60 horas reprodução (Preto) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-19 23:31:24","2024-06-19 23:31:24",911,904
 169,qcy-t17,https://amzn.to/3YJbDPb,"Fone de Ouvido Bluetooth Sem Fio QCY T17 com Microfone Intra-auricular (Preto) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-19 23:34:19","2024-11-12 23:12:48",744,739
 170,jbl-live-660nc,https://amzn.to/4cPrMIz,jbl-live-660nc,,301,0,1,1,0,0,admin,"2024-06-22 00:32:12","2024-06-22 00:32:12",623,620
 171,multilaser-ph264,https://amzn.to/3xAPVDq,multilaser-ph264,,301,0,1,1,0,0,admin,"2024-06-22 00:36:29","2024-06-22 00:36:29",309,308
@@ -230,7 +226,6 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 231,edifier-tws-1-pro-2,https://amzn.to/4fdNdUZ,edifier-tws-1-pro-2,,301,0,1,1,0,0,admin,"2024-11-06 21:56:16","2024-11-06 21:56:16",727,721
 232,apple-airpods-3-geracao,https://amzn.to/4fg4ahN,apple-airpods-3-geracao,,301,0,1,1,0,0,admin,"2024-11-06 22:48:44","2024-11-06 22:48:44",403,402
 233,qcy-h3-pro,https://amzn.to/3PAO4Eb,qcy-h3-pro,,301,0,1,1,0,0,admin,"2025-01-14 11:38:47","2025-01-14 11:38:47",625,619
-234,qcy-melobuds-pro,https://amzn.to/4fYEyoY,qcy-melobuds-pro,,301,0,1,1,0,0,admin,"2025-01-14 12:00:14","2025-01-14 12:00:14",1073,1056
 235,awei,https://amzn.to/40ZXDBM,awei,,301,0,1,1,0,0,admin,"2025-02-12 23:23:18","2025-02-12 23:23:18",880,864
 236,shokz-openfit,https://amzn.to/3ESoecv,"Fone de Condução Óssea Shokz OpenFit Air Preto : Amazon.com.br: Instrumentos Musicais",,301,0,1,1,0,0,admin,"2025-02-17 21:21:19","2025-02-17 21:21:19",791,780
 237,kanbun,https://amzn.to/41hGViH,"503 - Erro de serviço indisponível",,301,0,1,1,0,0,admin,"2025-02-17 21:22:32","2025-02-17 21:22:32",483,480
@@ -241,5 +236,19 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 242,gzlmmy,https://amzn.to/3X38REz,gzlmmy,,301,0,1,1,0,0,admin,"2025-02-18 23:12:55","2025-02-18 23:12:55",723,713
 243,qcy-h3-azul,https://amzn.to/3YyTK6G,qcy-h3-azul,,301,0,1,1,0,0,admin,"2025-05-07 21:47:22","2025-05-07 21:47:22",400,400
 244,qcy-t13-tws-branco,https://amzn.to/44Td6Hi,qcy-t13-tws-branco,,301,0,1,1,0,0,admin,"2025-05-12 21:45:50","2025-05-12 21:45:50",313,313
-245,qcy-t13,https://amzn.to/4n0rl3F,qcy-t13,,301,0,1,1,0,0,admin,"2025-06-14 23:04:58","2025-06-14 23:04:58",438,438
 246,lention-t4,https://amzn.to/4bsHE6b,lention-t4,,301,0,1,1,0,0,admin,"2026-01-30 00:34:17","2026-01-30 00:34:17",540,538
+"9100","qcy-t13-pro-anc","https://www.amazon.com.br/dp/B0HGYCPX86?tag=melhoresfon05-20","QCY T13 Pro ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9101","qcy-t13","https://www.amazon.com.br/dp/B0HGYCPX86?tag=melhoresfon05-20","QCY T13 Pro ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9102","qcy-melobuds-pro","https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20","QCY MeloBuds Pro","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9103","qcy-ht05-melobuds","https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20","QCY MeloBuds Pro","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9104","qcy-h3","https://www.amazon.com.br/dp/B0CFZST5DV?tag=melhoresfon05-20","QCY H3 ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9105","qcy-melobuds-n20","https://www.amazon.com.br/dp/B0FZVC6PMD?tag=melhoresfon05-20","QCY MeloBuds N20","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9106","qcy-ht07","https://www.amazon.com.br/dp/B0FZVC6PMD?tag=melhoresfon05-20","QCY MeloBuds N20","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9107","qcy-melobuds-a30","https://www.amazon.com.br/dp/B0H5JH96RV?tag=melhoresfon05-20","QCY MeloBuds A30","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+"9108","qcy-t20","https://www.amazon.com.br/dp/B0H5JH96RV?tag=melhoresfon05-20","QCY MeloBuds A30","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+250,airpods-4,https://www.amazon.com.br/dp/B0DGM4T4H8?tag=melhoresfon05-20,"Apple AirPods 4",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+250,galaxy-buds-core,https://www.amazon.com.br/dp/B0FP8T2RDC?tag=melhoresfon05-20,"Samsung Galaxy Buds Core",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+250,soundcore-q20i,https://www.amazon.com.br/dp/B0C3HCD34R?tag=melhoresfon05-20,"Anker Soundcore Q20i",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+250,qcy-melobuds-pro,https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20,"QCY MeloBuds Pro",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+250,edifier-w600bt,https://www.amazon.com.br/dp/B099J9T6CY?tag=melhoresfon05-20,"Edifier W600BT",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+250,sennheiser-hd-400s,https://www.amazon.com.br/dp/B07N2261R6?tag=melhoresfon05-20,"Sennheiser HD 400S",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0

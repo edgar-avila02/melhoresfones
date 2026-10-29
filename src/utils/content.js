@@ -64,6 +64,17 @@ function loadMarkdownPosts() {
   return mdPosts;
 }
 
+export function getPosts() {
+  const md = loadMarkdownPosts();
+  const slugs = new Set(md.map(p => p.slug));
+  return [...md, ...rawPosts.filter(p => !slugs.has(p.slug))];
+}
+
+export function getPostBySlug(slug) {
+  const all = getPosts();
+  return all.find(p => p.slug === slug);
+}
+
 const markdownPosts = loadMarkdownPosts();
 const mdSlugs = new Set(markdownPosts.map(p => p.slug));
 const posts = [...markdownPosts, ...rawPosts.filter(p => !mdSlugs.has(p.slug))];

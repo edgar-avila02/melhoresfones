@@ -1,6 +1,6 @@
 # 🤖 Orquestrador Geral da Esteira Editorial (Pipeline de Conteúdo)
 
-Este documento é o guia de operação e comando rápido da esteira automatizada de produção de conteúdo do portal **Melhores Fones**. Ele integra e comanda os 3 agentes da pasta `agents/`:
+Este documento é o guia de operação e comando rápido da esteira automatizada de produção de conteúdo do portal **Melhores Fones**. Ele integra e comanda os 3 agentes da pasta `agents-novos-artigos/`:
 
 1. `01-pesquisador.md` (Pesquisa SERP no Google, análise de 5 concorrentes, média + 25% de palavras, similaridade de produtos e pauta Outline).
 2. `02-redator.md` (Redação técnica audiófila com **mínimo de 3 imagens contextuais**, **capa de alto impacto para o Google**, **vídeo do YouTube incorporado** e layout idêntico ao site).
@@ -13,17 +13,17 @@ Este documento é o guia de operação e comando rápido da esteira automatizada
 Basta você colar no chat do Antigravity a seguinte frase substituindo pela sua palavra-chave desejada:
 
 ```text
-Execute a esteira da pasta agents para a palavra-chave: [SUA PALAVRA-CHAVE AQUI]
+Execute a esteira da pasta agents-novos-artigos para a palavra-chave: [SUA PALAVRA-CHAVE AQUI]
 ```
 
 ### Exemplos Práticos:
 - **Artigo Comercial:**
   ```text
-  Execute a esteira da pasta agents para a palavra-chave: melhores fones bluetooth
+  Execute a esteira da pasta agents-novos-artigos para a palavra-chave: melhores fones bluetooth
   ```
 - **Artigo de Dúvida / Tutorial:**
   ```text
-  Execute a esteira da pasta agents para a palavra-chave: como resetar fone bluetooth
+  Execute a esteira da pasta agents-novos-artigos para a palavra-chave: como resetar fone bluetooth
   ```
 
 ---

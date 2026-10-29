@@ -1,15 +1,55 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
-import { posts } from '../utils/content.js';
+import { posts, getPostBySlug } from '../utils/content.js';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export async function getStaticPaths() {
-  return posts.map((post: any) => ({
+  const postSlugs = new Set(posts.map((p: any) => p.slug));
+
+  const postPaths = posts.map((post: any) => ({
     params: { slug: post.slug },
-    props: { post }
+    props: { post, isRedirect: false, redirectUrl: '' }
   }));
+
+  // Carrega os Pretty Links de redirecionamento para funcionar no localhost e build
+  const redirectPaths: any[] = [];
+  try {
+    const csvContent = fs.readFileSync(path.resolve('src/data/pretty-links.csv'), 'utf8');
+    const lines = csvContent.split(/\r?\n/).filter(Boolean);
+    for (let i = 1; i < lines.length; i++) {
+      const parts = lines[i].split(',');
+      if (parts.length >= 3) {
+        const slug = parts[1].replace(/^"|"$/g, '').trim().replace(/^\/+|\/+$/g, '');
+        const targetUrl = parts[2].replace(/^"|"$/g, '').trim();
+        if (slug && targetUrl && !postSlugs.has(slug)) {
+          postSlugs.add(slug); // Evita duplicatas
+          redirectPaths.push({
+            params: { slug },
+            props: { post: null, isRedirect: true, redirectUrl: targetUrl }
+          });
+        }
+      }
+    }
+  } catch (e) {
+    console.error('Erro ao ler pretty-links.csv em [slug].astro:', e);
+  }
+
+  return [...postPaths, ...redirectPaths];
 }
 
-const { post } = Astro.props;
+const { slug } = Astro.params;
+const { isRedirect, redirectUrl } = Astro.props;
+let currentPost = Astro.props.post;
+
+if (isRedirect && redirectUrl) {
+  return Astro.redirect(redirectUrl, 301);
+}
+
+if (!isRedirect && slug) {
+  const fresh = getPostBySlug(slug);
+  if (fresh) currentPost = fresh;
+}
 ---
 
-<ArticleLayout post={post} />
+<ArticleLayout post={currentPost} />
