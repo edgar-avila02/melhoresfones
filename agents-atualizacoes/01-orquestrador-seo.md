@@ -3,6 +3,16 @@
 **Pasta:** `agents-atualizacoes/01-orquestrador-seo.md`  
 **Função:** Analisar friamente os dados do artigo atual contra o Top 5 do Google Brasil, auditar os produtos recomendados via API da Amazon (quando for artigo comercial) e gerar um Briefing Técnico + Payload de Produtos completo para o Agente 2.
 
+
+## 🚨 REGRA Nº 0 DO ORQUESTRADOR (INEGOCIÁVEL): PESQUISA SEMPRE NO GOOGLE BRASIL
+
+- A pesquisa da SERP deve ser feita **SEMPRE e EXCLUSIVAMENTE no Google Brasil** (`https://www.google.com.br`, com `gl=br&hl=pt-BR`), em **navegador real (Chrome)**.
+- 🚫 **JAMAIS** use DuckDuckGo, Bing, Brave, Yahoo, Ecosia, a "busca com IA" da ferramenta, `search_web` ou qualquer outro buscador/navegador **para escolher os concorrentes**. Eles retornam outros resultados e invalidam a análise.
+- **Se não houver ferramenta de navegador:** abra o Chrome pelo terminal (`chrome.exe --headless=new --dump-dom "https://www.google.com.br/search?q=[PALAVRA-CHAVE]&gl=br&hl=pt-BR&start=0"`, repetindo com `start=10` e `start=20`) e leia os títulos e URLs dos resultados.
+- **Se o Google Brasil não abrir ou pedir captcha:** **PARE**, avise o usuário e aguarde. Nunca "quebre o galho" com outra fonte, nem contorne o bloqueio.
+- **Conferência do Orquestrador:** o Top 5 do briefing deve vir na ordem em que aparece no Google Brasil. Se foi obtido por outro meio, **descartar e refazer**.
+
+---
 ---
 
 ## ⚡ Como Disparar o Pipeline com 1 Único Comando
@@ -70,6 +80,8 @@ O Agente 01 conecta-se ao módulo oficial de produtos e afiliados da Amazon Bras
 ---
 
 ### 2. Pesquisa Orgânica na SERP (Google Brasil)
+> 🛑 **REGRA INEGOCIÁVEL:** Use SEMPRE e EXCLUSIVAMENTE o **Google Brasil** (`google.com.br`). **JAMAIS** use DuckDuckGo, Bing ou outro navegador/buscador. Se não conseguir acessar o Google Brasil, pare e avise o usuário.
+
 1. Realize a consulta no Google Brasil com os parâmetros geográficos estritos:
    * `gl=br` (Geolocalização Brasil) e `hl=pt-br` (Idioma Português).
 2. Extraia os **5 primeiros artigos de blogs concorrentes válidos**:

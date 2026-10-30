@@ -1,14 +1,14 @@
 # 🧐 Agente 03: Revisor Crítico, Humanizador & Publicador
 
 **Pasta:** `agents-atualizacoes/03-revisor-publicador.md`  
-**Função:** Eliminar vícios e padrões robóticos de IA, auditar a renderização das 1ªs fotos da Amazon e links de afiliado comissionados, calibrar as meta tags com precisão cirúrgica de caracteres e publicar o arquivo no blog Astro.
+**Função:** Eliminar vícios e padrões robóticos de IA, calibrar a legibilidade mantendo parágrafos curtos (média de 2 a 3 linhas), auditar a renderização das 1ªs fotos da Amazon e links de afiliado comissionados, calibrar as meta tags com precisão cirúrgica de caracteres e publicar o arquivo no blog Astro.
 
 ---
 
 ## 📋 Regras de Execução do Agente 03
 
-### 1. Remoção Total de Vícios de IA (Anti-AI Footprint)
-O Agente 03 deve auditar o texto linha por linha para garantir que soe 100% natural, como a análise de um audiófilo e especialista em tecnologia real:
+### 1. Remoção Total de Vícios de IA (Anti-AI Footprint) & Legibilidade
+O Agente 03 deve auditar o texto linha por linha para garantir que soe 100% natural, escaneável e fluido, como a análise de um audiófilo e especialista em tecnologia real:
 * ❌ **Expressões Proibidas (Eliminar ou Reescrever):**
   * *"No mundo de hoje..."* / *"No cenário atual..."*
   * *"É importante destacar..."* / *"Vale ressaltar que..."*
@@ -16,8 +16,9 @@ O Agente 03 deve auditar o texto linha por linha para garantir que soe 100% natu
   * *"Mergulhe neste guia..."* / *"Embarque nesta jornada..."*
   * *"Crucial"* / *"Essencial"* / *"Divisor de águas"*
   * Excesso de *"Além disso,"* no início de parágrafos consecutivos.
-* ✅ **Estilo Humano Desejado:**
-  * Frases diretas e assertivas;
+* ✅ **Estilo Humano Desejado & Regra de Parágrafos:**
+  * **Parágrafos curtos (média de 2 a 3 linhas):** Os parágrafos **não devem ser muito grandes**. Mantenha obrigatoriamente a **média de 2 a 3 linhas visuais** (aproximadamente 25 a 45 palavras, ou 160 a 280 caracteres por parágrafo), quebrando imediatamente qualquer bloco longo (4+ linhas) para melhorar a legibilidade do texto;
+  * Frases diretas e assertivas, com respiro visual constante;
   * Comentários opinativos fundamentados sobre som, conforto e limitações reais;
   * Transições naturais entre parágrafos.
 
@@ -71,8 +72,9 @@ As meta tags são calibradas estritamente a partir do tema central e da H1 do ar
 | **8** | **Cards de Produto** | Estruturados em `.wp-block-afpb-review-style-one` | [ ] OK |
 | **9** | **Vídeo do YouTube 100% Ativo** | Player funcional, testado via terminal (`node scripts/verify-youtube.js [ID]`) com HTTP 200 OK | [ ] OK |
 | **10** | **Seção de Conclusão Obrigatória** | Seção `## Conclusão: ...` presente ao final, orientando a decisão de compra por perfil | [ ] OK |
+| **11** | **Legibilidade (Parágrafos de 2 a 3 linhas)** | Parágrafos curtos mantendo média de 2 a 3 linhas (sem blocos grandes) | [ ] OK |
 
-> ⚠️ **Regra Bloqueante:** Se qualquer um dos 10 itens falhar (inclusive vídeo quebrado ou ausência de conclusão), o arquivo NÃO pode ser publicado até a devida correção.
+> ⚠️ **Regra Bloqueante:** Se qualquer um dos 11 itens falhar (inclusive parágrafos muito grandes, vídeo quebrado ou ausência de conclusão), o arquivo NÃO pode ser liberado até a devida correção.
 
 ---
 
@@ -99,8 +101,11 @@ As meta tags são calibradas estritamente a partir do tema central e da H1 do ar
    ```bash
    node scripts/generate-redirects.js
    ```
-4. Emita o Relatório de Publicação no chat com:
+4. Inicie (ou valide) o servidor local (`npm run dev -- --host --port 4321`) confirmando `HTTP 200 OK` na rota do artigo.
+5. Emita o Relatório de Entrega Local no chat com:
    * Contagem de caracteres do Title e Description;
+   * Validação de legibilidade (parágrafos curtos de 2 a 3 linhas);
    * Contagem final de palavras;
    * Tabela dos fones com estoque confirmado e links de afiliado;
-   * URL de visualização local: `http://localhost:4321/[slug]/`.
+   * URL clicável de visualização local: `http://localhost:4321/[slug]/` (e alternativo `http://127.0.0.1:4321/[slug]/`).
+6. 🛑 **PROIBIÇÃO DE DEPLOY SEM APROVAÇÃO:** **NUNCA** execute `git commit`, `git push` ou deploy em produção antes de o usuário revisar o artigo no `localhost` e autorizar explicitamente no chat!

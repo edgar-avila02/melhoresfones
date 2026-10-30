@@ -67,8 +67,11 @@ flowchart TD
         Ag3 --> R6["6. Salva em src/content/posts/[slug].md e compila redirects"]
     end
 
-    ETAPA3 --> Out["✅ Artigo Publicado e Disponível no Blog"]
+    ETAPA3 --> Preview["🛑 Checkpoint Localhost:<br/>Inicia servidor local (http://localhost:4321/[slug]/) e AGUARDA OK do usuário"]
+    Preview -->|"Usuário aprova ('OK / Pode subir')"| Out["🚀 Deploy em Produção (git commit + git push)"]
 ```
+
+> 🛑 **REGRA BLOQUEANTE DE PREVIEW LOCAL:** Nunca faça `git commit`, `git push` ou deploy para produção antes de entregar o link do `localhost` (`npm run dev -- --host --port 4321`) e receber o **"OK"** explícito do usuário!
 
 ---
 
@@ -100,3 +103,8 @@ flowchart TD
 3. `02-redator-especialista.md` — Redator técnico, aplicador de cards modernos, vídeo validado e seção de conclusão.
 4. `03-revisor-publicador.md` — Humanizador anti-IA, checagem bloqueante (vídeo ativo + conclusão), calibrador de meta tags e publicador.
 
+---
+
+## 🚨 Regra Bloqueante: Pesquisa SEMPRE no Google Brasil
+- O Top 5 é levantado **somente no Google Brasil** (`google.com.br`, `gl=br&hl=pt-BR`), em navegador real (Chrome; no Windows, `chrome.exe --headless=new --dump-dom` se não houver ferramenta de navegador).
+- **JAMAIS** usar DuckDuckGo, Bing, `search_web` ou outro buscador. Se o Google pedir captcha ou bloquear, **pare e avise o usuário**.
