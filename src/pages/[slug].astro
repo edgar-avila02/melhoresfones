@@ -1,13 +1,14 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
-import { posts, getPostBySlug } from '../utils/content.js';
+import { getPosts, getPostBySlug } from '../utils/content.js';
 import fs from 'node:fs';
 import path from 'node:path';
 
 export async function getStaticPaths() {
-  const postSlugs = new Set(posts.map((p: any) => p.slug));
+  const allPosts = getPosts();
+  const postSlugs = new Set(allPosts.map((p: any) => p.slug));
 
-  const postPaths = posts.map((post: any) => ({
+  const postPaths = allPosts.map((post: any) => ({
     params: { slug: post.slug },
     props: { post, isRedirect: false, redirectUrl: '' }
   }));

@@ -172,15 +172,15 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 177,airpods-max,https://amzn.to/3CZKqkn,airpods-max,,301,0,1,1,0,0,admin,"2024-06-22 01:00:23","2025-02-14 00:17:43",810,806
 178,sony-wh1000xm5,https://amzn.to/3zlYhPM,sony-wh1000xm5,,301,0,1,1,0,0,admin,"2024-06-22 01:05:19","2024-06-22 01:05:19",409,408
 179,anker-q35,https://amzn.to/4cyePCw,"Fone de Ouvido Soundcore Anker Life Q35 com Cancelamento de Ruído Ativo, Bluetooth com LDAC para áudio de alta resolução, 40 horas de música, Ajuste Confortável, Chamadas Nítidas | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-22 01:08:05","2024-06-22 01:08:05",543,543
-180,kz-zsx-terminator,https://amzn.to/3KX6PiJ,"Fone de Ouvido Kz Zsx Terminator Retorno Monitor de Palco Hybrid 6 Driver Hifi Cabo Destacável (Roxo Sem Mic) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-24 17:19:56","2024-06-24 17:19:56",2189,2138
-181,kz-z1-pro,https://amzn.to/4bha13l,"Fones de ouvido KZ Z1 Pro True Wireless TWS Bluetooth v5.2 híbrido Dual Magnetic Dynamic Game Earbuds Touch Control com cancelamento de ruído Sport IPX6 à prova d\'água Headset (preto) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-24 17:22:36","2024-06-24 17:22:55",1285,1261
-182,kz-as16-pro,https://amzn.to/3RHtqUj,kz-as16-pro,,301,0,1,1,0,0,admin,"2024-06-24 17:25:38","2024-06-24 17:25:38",1433,1409
-183,kz-zs10-pro-x,https://amzn.to/4fGHNBH,kz-zs10-pro-x,,301,0,1,1,0,0,admin,"2024-06-24 17:28:52","2024-11-12 14:48:36",1042,1015
-184,kz-castor,https://amzn.to/3EPDAP2,"Fone de ouvido KZ Castor - Tuning ajustável, driver duplo, HiFi intra-auricular, monitor, com cancelamento de ruído, com cabo removível (Prata) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-24 17:31:20","2025-02-26 00:59:18",939,925
-185,kz-d-fi,https://amzn.to/3O3z68L,"Fone de ouvido 2023 Kz D-Fi com som dinâmico intra-auricular com fio, tom ajustável para transmissão ao vivo de jogos | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-24 17:34:26","2024-11-12 14:50:04",836,824
-186,kz-zsn-pro-2,https://amzn.to/45Gfboy,kz-zsn-pro-2,,301,0,1,1,0,0,admin,"2024-06-24 17:42:19","2024-06-24 17:42:19",1132,1116
-187,kz-edx-pro,https://amzn.to/3VxrP4y,kz-edx-pro,,301,0,1,1,0,0,admin,"2024-06-24 17:45:07","2024-06-24 17:45:07",1090,1074
-188,kz-qkz-ak6,https://amzn.to/3VS2lAd,"Fone de Ouvido Ak6 Com Microfone Original Com Case (Transparente) : Amazon.com.br: Eletrônicos",,301,0,1,1,0,0,admin,"2024-06-24 17:48:23","2024-06-24 17:48:23",1420,1413
+180,kz-zsx-terminator,https://www.amazon.com.br/dp/B07WTTK1L6?tag=melhoresfon05-20,"KZ ZSX Terminator",,301,0,1,1,0,0,admin,"2024-06-24 17:19:56","2026-10-29 22:40:00",2189,2138
+181,kz-z1-pro,https://www.amazon.com.br/dp/B0DJQWJHN7?tag=melhoresfon05-20,"Módulo Bluetooth KZ AZ09 5.4",,301,0,1,1,0,0,admin,"2024-06-24 17:22:36","2026-10-29 22:40:00",1285,1261
+182,kz-as16-pro,https://www.amazon.com.br/dp/B0B71Q9SSF?tag=melhoresfon05-20,"KZ AS16 Pro",,301,0,1,1,0,0,admin,"2024-06-24 17:25:38","2026-10-29 22:40:00",1433,1409
+183,kz-zs10-pro-x,https://www.amazon.com.br/dp/B0DGMM7PLD?tag=melhoresfon05-20,"KZ ZS10 Pro 2",,301,0,1,1,0,0,admin,"2024-06-24 17:28:52","2026-10-29 22:40:00",1042,1015
+184,kz-castor,https://www.amazon.com.br/dp/B0GTF6CDK9?tag=melhoresfon05-20,"KZ Castor Pro",,301,0,1,1,0,0,admin,"2024-06-24 17:31:20","2026-10-29 22:40:00",939,925
+185,kz-d-fi,https://www.amazon.com.br/dp/B0C7WJ4Q9M?tag=melhoresfon05-20,"KZ D-Fi",,301,0,1,1,0,0,admin,"2024-06-24 17:34:26","2026-10-29 22:40:00",836,824
+186,kz-zsn-pro-2,https://www.amazon.com.br/dp/B0FPDGSYJC?tag=melhoresfon05-20,"KZ ZSN Pro 2",,301,0,1,1,0,0,admin,"2024-06-24 17:42:19","2026-10-29 22:40:00",1132,1116
+187,kz-edx-pro,https://www.amazon.com.br/dp/B0DTM3BJ2H?tag=melhoresfon05-20,"KZ EDX Pro X",,301,0,1,1,0,0,admin,"2024-06-24 17:45:07","2026-10-29 22:40:00",1090,1074
+188,kz-qkz-ak6,https://www.amazon.com.br/dp/B0D9NX22CZ?tag=melhoresfon05-20,"KZ EDC Pro",,301,0,1,1,0,0,admin,"2024-06-24 17:48:23","2026-10-29 22:40:00",1420,1413
 189,jbl-t205,https://amzn.to/3Lb39Kd,jbl-t205,,301,0,1,1,0,0,admin,"2024-06-29 00:21:30","2024-06-29 00:21:30",614,608
 190,jbl-quantum-50,https://amzn.to/3VLEqRL,jbl-quantum-50,,301,0,1,1,0,0,admin,"2024-06-29 00:24:02","2024-06-29 00:24:02",961,959
 191,jbl-t110,https://amzn.to/3RJK9qc,"Fone de Ouvido JBL Tune 110 Intra-Auricular Preto - ‎JBLT110BLK | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-29 00:26:50","2024-06-29 00:26:50",688,687
@@ -252,3 +252,9 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 250,qcy-melobuds-pro,https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20,"QCY MeloBuds Pro",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
 250,edifier-w600bt,https://www.amazon.com.br/dp/B099J9T6CY?tag=melhoresfon05-20,"Edifier W600BT",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
 250,sennheiser-hd-400s,https://www.amazon.com.br/dp/B07N2261R6?tag=melhoresfon05-20,"Sennheiser HD 400S",,301,0,1,1,0,0,admin,"2026-10-29 20:18:11","2026-10-29 20:18:11",0,0
+9201,kz-zs10-pro-2,https://www.amazon.com.br/dp/B0DGMM7PLD?tag=melhoresfon05-20,"KZ ZS10 Pro 2",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9202,kz-castor-pro,https://www.amazon.com.br/dp/B0GTF6CDK9?tag=melhoresfon05-20,"KZ Castor Pro",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9203,kz-edx-pro-x,https://www.amazon.com.br/dp/B0DTM3BJ2H?tag=melhoresfon05-20,"KZ EDX Pro X",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9204,kz-edc-pro,https://www.amazon.com.br/dp/B0D9NX22CZ?tag=melhoresfon05-20,"KZ EDC Pro",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9205,kz-zsn-pro-x,https://www.amazon.com.br/dp/B0CTXSX5BD?tag=melhoresfon05-20,"KZ ZSN Pro X",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9206,kz-az09,https://www.amazon.com.br/dp/B0DJQWJHN7?tag=melhoresfon05-20,"Módulo KZ AZ09 Bluetooth 5.4",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0

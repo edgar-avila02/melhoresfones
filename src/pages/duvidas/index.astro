@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/blog/PostCard.astro';
-import { posts } from '../../utils/content.js';
+import { getPosts } from '../../utils/content.js';
 
-const categoryPosts = posts.filter((p: any) => p.categories?.includes(21));
+const categoryPosts = getPosts().filter((p: any) => p.categories?.includes(21));
 ---
 
 <BaseLayout

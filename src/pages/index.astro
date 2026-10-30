@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/blog/PostCard.astro';
-import { posts } from '../utils/content.js';
+import { getPosts } from '../utils/content.js';
 
 // Sort posts by date descending
-const sortedPosts = [...posts].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const sortedPosts = [...getPosts()].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 const recentPosts = sortedPosts.slice(0, 12);
 ---
 

@@ -37,7 +37,7 @@ function loadMarkdownPosts() {
     const description = frontmatter.description || '';
     const seoTitle = frontmatter.seoTitle || frontmatter.title || slug;
     const seoDescription = frontmatter.seoDescription || frontmatter.description || '';
-    const category = frontmatter.category === 'duvidas' ? 21 : 17;
+    const category = frontmatter.category === 'duvidas' ? 21 : 31;
     const date = frontmatter.pubDate || new Date().toISOString();
     const modified = frontmatter.modDate || date;
     const renderedHtml = marked.parse(rawBody);
