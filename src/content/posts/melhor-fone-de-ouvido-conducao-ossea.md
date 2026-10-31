@@ -1,7 +1,7 @@
 ---
 title: "Melhor fone de ouvido condução óssea de 2026"
 description: "Descubra qual é o melhor fone de ouvido condução ossea em 2026. Testamos fixação, som e bateria para corrida, ciclismo e natação. Confira!"
-pubDate: "2024-03-23"
+pubDate: "2026-10-30"
 modDate: "2026-10-30"
 category: "melhores"
 author: "Edgar Avila"

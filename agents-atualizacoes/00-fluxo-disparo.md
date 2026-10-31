@@ -121,3 +121,9 @@ flowchart TD
 - Todos os links de botões de compra e conversão `.afpb__btn` devem ser Pretty Links limpos no formato `/[slug-do-produto]/` (ex: `/sony-wh-1000xm4/`, `/shokz-openrun-pro-2/`).
 - 🚫 **PROIBIDO** colocar links diretos da Amazon ou links encurtados externos no corpo do texto.
 - O Orquestrador deve cadastrar os Pretty Links no `src/data/pretty-links.csv` apontando para a Amazon com `tag=melhoresfon05-20` e compilar via `node scripts/generate-redirects.js` para atualizar o `public/_redirects`.
+
+---
+
+## 🚨 Regra Bloqueante: Atualização Obrigatória da Data de Publicação (pubDate)
+- Toda vez que um artigo for atualizado, a data de publicação (`pubDate:`) **DEVE ser obrigatoriamente atualizada para a data do dia atual** (`YYYY-MM-DD`), junto com `modDate:`.
+- 🚫 **PROIBIDO** manter datas antigas nos artigos atualizados. A renovação de `pubDate` garante que o Google e os leitores identifiquem o frescor imediato do post.

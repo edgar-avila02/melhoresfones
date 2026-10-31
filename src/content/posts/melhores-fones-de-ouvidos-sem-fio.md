@@ -1,7 +1,7 @@
 ---
 title: "Melhores fones de ouvido sem fio de 2026: top 10"
 description: "Confira os melhores fones de ouvido sem fio testados em 2026. Comparamos bateria, cancelamento de ruído e qualidade sonora. Escolha o seu!"
-pubDate: "2024-03-23"
+pubDate: "2026-10-30"
 modDate: "2026-10-30"
 category: "melhores"
 author: "Edgar Avila"

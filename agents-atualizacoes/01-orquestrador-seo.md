@@ -32,6 +32,15 @@ Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
 - **Cadastro no CSV e Compilação:** O Orquestrador deve registrar o slug em `src/data/pretty-links.csv` apontando para a URL comissionada da Amazon (`tag=melhoresfon05-20`) e executar `node scripts/generate-redirects.js` para atualizar o `public/_redirects` antes de entregar o artigo.
 
 ---
+
+## 🚨 REGRA Nº 0.3 DO ORQUESTRADOR (INEGOCIÁVEL): ATUALIZAÇÃO OBRIGATÓRIA DA DATA DE PUBLICAÇÃO (PUBDATE)
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Atualização do Frescor de Publicação:** Toda vez que um artigo for atualizado pela esteira, a data de publicação (`pubDate:` no Frontmatter) **DEVE OBRIGATORIAMENTE SER ATUALIZADA PARA A DATA ATUAL DA ATUALIZAÇÃO** (formato `YYYY-MM-DD`), junto com `modDate:`.
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Manter `pubDate` antiga ou congelada no ano de criação original do post. O artigo atualizado deve renascer com data fresca para os motores de busca (Google Freshness) e para os leitores do portal.
+- **Conferência Bloqueante do Orquestrador:** O Orquestrador só autoriza a finalização da esteira se `pubDate` e `modDate` estiverem ambos calibrados exatamente com a data do dia em que a atualização foi concluída.
+
+---
 ---
 
 ## ⚡ Como Disparar o Pipeline com 1 Único Comando

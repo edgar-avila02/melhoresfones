@@ -73,8 +73,9 @@ As meta tags são calibradas estritamente a partir do tema central e da H1 do ar
 | **9** | **Vídeo do YouTube 100% Ativo** | Player funcional, testado via terminal (`node scripts/verify-youtube.js [ID]`) com HTTP 200 OK | [ ] OK |
 | **10** | **Seção de Conclusão Obrigatória** | Seção `## Conclusão: ...` presente ao final, orientando a decisão de compra por perfil | [ ] OK |
 | **11** | **Legibilidade (Parágrafos de 2 a 3 linhas)** | Parágrafos curtos mantendo média de 2 a 3 linhas (sem blocos grandes) | [ ] OK |
+| **12** | **Atualização da Data de Publicação** | `pubDate` atualizada para a data do dia atual (`YYYY-MM-DD`) junto com `modDate` | [ ] OK |
 
-> ⚠️ **Regra Bloqueante:** Se qualquer um dos 11 itens falhar (inclusive parágrafos muito grandes, vídeo quebrado ou ausência de conclusão), o arquivo NÃO pode ser liberado até a devida correção.
+> ⚠️ **Regra Bloqueante:** Se qualquer um dos 12 itens falhar (inclusive manter data de publicação antiga, parágrafos muito grandes, vídeo quebrado ou ausência de conclusão), o arquivo NÃO pode ser liberado até a devida correção.
 
 ---
 
@@ -85,8 +86,8 @@ As meta tags são calibradas estritamente a partir do tema central e da H1 do ar
    ---
    title: "Título baseado na H1 (máx 50 chars)"
    description: "Meta description atrativa baseada na H1 com chamada para ação rápida e precisa (120 a 150 chars)"
-   pubDate: "YYYY-MM-DD"
-   modDate: "YYYY-MM-DD"
+   pubDate: "YYYY-MM-DD" # 🚨 OBRIGATÓRIO: Atualizar SEMPRE para a data do dia da atualização
+   modDate: "YYYY-MM-DD" # 🚨 OBRIGATÓRIO: Atualizar SEMPRE para a data do dia da atualização
    category: "melhores" # ou "duvidas"
    author: "Edgar Avila"
    image: "/images/posts/[slug]/capa.jpg"

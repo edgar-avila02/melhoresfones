@@ -109,3 +109,11 @@ Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
   node scripts/generate-redirects.js
   ```
   garantindo que o arquivo `public/_redirects` contenha a regra ativa de redirecionamento 301 antes de liberar o artigo para preview local.
+
+---
+
+## 🚨 REGRA Nº 0.3 DO ORQUESTRADOR (INEGOCIÁVEL): ATUALIZAÇÃO OBRIGATÓRIA DA DATA DE PUBLICAÇÃO (PUBDATE)
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Renovação da Data de Publicação:** Sempre que houver uma atualização em qualquer artigo, a data de publicação (`pubDate:`) **DEVE ser obrigatoriamente atualizada para a data do dia da atualização** (`YYYY-MM-DD`), junto com `modDate:`.
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Deixar a data original antiga nos artigos atualizados. A `pubDate` renovada é vital para o frescor de SEO (Google Freshness) e para o leitor saber que as recomendações são atuais.
