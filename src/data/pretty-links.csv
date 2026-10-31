@@ -120,7 +120,7 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 121,xiaomi-redmi-airdots-3-cor-azul,https://amzn.to/3wMuejE,xiaomi-redmi-airdots-3-cor-azul,,301,0,1,1,0,0,admin,"2024-05-29 16:03:14","2024-05-29 16:03:14",798,798
 123,"jbl-endurance-peak 3",https://amzn.to/450M52G,"jbl-endurance-peak 3",,301,0,1,1,0,0,admin,"2024-05-29 16:08:39","2024-05-29 16:08:39",75,75
 124,"airpod- pro-2",https://amzn.to/4aLOVtD,"airpod- pro-2",,301,0,1,1,0,0,admin,"2024-05-29 16:12:14","2024-05-29 16:12:14",140,140
-125,sony-wh-1000xm4,https://amzn.to/3VmWnXR,"Headphone Sony WH-1000XM4 Preto sem fio Bluetooth e com Noise Cancelling (cancelamento de Ruído) | WH-1000XM4BMUC | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-01 00:58:39","2024-06-01 00:58:39",1608,1594
+9301,sony-wh-1000xm4,https://www.amazon.com.br/dp/B0863TXGM3?tag=melhoresfon05-20,"Sony WH-1000XM4",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 126,jbl-endurance-race,https://amzn.to/42q3XDh,"JBL, Fone de Ouvido Esportivo, Bluetooth TWS, Endurance Race Intra-Auricular, À Prova D’água - Preto | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-01 01:01:28","2025-04-13 18:17:08",1577,1561
 127,sony-wh-1000xm5,https://amzn.to/4efcnCO,"Phone Original WH-1000XM5 Noise Cancelling Wireless Headphones - 30 hours battery life - Over-ear style - Optimised for Alexa and the Google Assistant - with built-in mic for phone calls - Black : Amazon.com.br: Eletrônicos",,301,0,1,1,0,0,admin,"2024-06-01 01:03:39","2024-06-01 01:03:39",372,372
 128,logitech-lightspeed-g435,https://amzn.to/3V79yux,logitech-lightspeed-g435,,301,0,1,1,0,0,admin,"2024-06-01 01:07:22","2024-06-01 01:07:22",864,864
@@ -129,12 +129,12 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 131,jbl-tune-510bt,https://amzn.to/3V87kva,jbl-tune-510bt,,301,0,1,1,0,0,admin,"2024-06-01 01:18:09","2024-06-01 01:18:09",861,858
 132,pioneer-hdj-x10-k,https://amzn.to/3x0CAUO,"Pioneer Fones de ouvido DJ HDJ-X10-K Professional Flagship over-ear DJ (preto) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-01 01:23:36","2024-06-01 01:23:36",471,471
 133,akg-k245,https://amzn.to/4bZgmBf,"JBL, Fone de Ouvido Profissional, K245, AKG by Harman - Preto : Amazon.com.br: Eletrônicos",,301,0,1,1,0,0,admin,"2024-06-01 01:29:37","2024-06-01 01:29:37",435,434
-134,airpods-pro-2,https://amzn.to/4bEIES5,airpods-pro-2,,301,0,1,1,0,0,admin,"2024-06-01 01:32:51","2024-06-01 01:32:51",1040,1032
+9302,airpods-pro-2,https://www.amazon.com.br/dp/B0CHWRXH8B?tag=melhoresfon05-20,"Apple AirPods Pro 2",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 135,ath-m50x,https://amzn.to/3x0CNay,ath-m50x,,301,0,1,1,0,0,admin,"2024-06-01 01:35:36","2024-06-01 01:35:36",452,452
-136,jbl-endurance-peak-3,https://amzn.to/3XvvGSv,"JBL, Fone de Ouvido Esportivo Sem Fio, Endurance Peak lll - Preto | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-06-06 23:57:06","2024-06-06 23:57:06",1015,1014
+9303,jbl-endurance-peak-3,https://www.amazon.com.br/dp/B0BJL685Q7?tag=melhoresfon05-20,"JBL Endurance Peak 3",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 137,jbl-quantum-tws,https://amzn.to/4efLheP,jbl-quantum-tws,,301,0,1,1,0,0,admin,"2024-06-07 00:01:31","2024-06-07 00:01:31",361,361
-138,jbl-wave-buds,https://amzn.to/4eauxWe,jbl-wave-buds,,301,0,1,1,0,0,admin,"2024-06-07 00:03:41","2024-06-07 00:03:41",445,445
-139,jbl-tune-520bt,https://amzn.to/4ca5YXo,jbl-tune-520bt,,301,0,1,1,0,0,admin,"2024-06-07 00:08:32","2024-06-07 00:08:44",323,323
+9307,jbl-wave-buds,https://www.amazon.com.br/dp/B0BHDMHHM9?tag=melhoresfon05-20,"JBL Wave Buds TWS",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9308,jbl-tune-520bt,https://www.amazon.com.br/dp/B0CCLKLSDD?tag=melhoresfon05-20,"JBL Tune 520BT",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 140,jbl-tune-flex,https://amzn.to/3Vwgmn0,jbl-tune-flex,,301,0,1,1,0,0,admin,"2024-06-07 00:11:48","2024-06-07 00:11:48",505,505
 141,jbl-wave-flex-preto,https://amzn.to/3VtaNFQ,jbl-wave-flex-preto,,301,0,1,1,0,0,admin,"2024-06-07 00:16:50","2024-06-07 00:17:01",355,355
 142,jbl-tune-125bt,https://amzn.to/4caodMI,jbl-tune-125bt,,301,0,1,1,0,0,admin,"2024-06-07 00:20:14","2024-06-07 00:20:14",351,351
@@ -203,7 +203,7 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 208,szambit,https://amzn.to/3XLx5V3,szMBIT,,301,0,1,1,0,0,admin,"2024-07-04 00:31:36","2024-07-04 00:32:00",315,310
 209,tpwewrx-ipx8,https://amzn.to/3YZwIGt,tpwewrx-ipx8,,301,0,1,1,0,0,admin,"2024-07-04 00:36:33","2024-11-12 23:19:20",713,701
 210,aftershokz-asc100,https://amzn.to/3L7g7Jc,aftershokz-asc100,,301,0,1,1,0,0,admin,"2024-07-04 00:42:19","2024-07-04 00:42:19",728,714
-211,shokz-openmove,https://amzn.to/3zxowDi,"SHOKZ OpenMove – Fones de ouvido esportivos Bluetooth Open-Ear – Fones de ouvido sem fio de condução óssea – À prova de suor para corrida e exercícios, com pacote de adesivos (cinza) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-07-04 00:45:14","2024-07-04 00:45:14",628,624
+9402,shokz-openmove,https://www.amazon.com.br/dp/B09LT3YZWR?tag=melhoresfon05-20,"Shokz OpenMove",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 212,aftershokz-aeropex,https://amzn.to/3WjzeWZ,"AfterShokz Aeropex – Fones de ouvido esportivos de condução óssea Bluetooth – Fones de ouvido sem fio resistentes ao suor para exercícios e corrida – Microfone embutido – com cinto esportivo | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-07-04 00:50:29","2024-07-04 00:50:29",314,309
 213,sennheiser-momentum-4,https://amzn.to/4cQf24b,"Fone de ouvido sem fio Sennheiser Momentum 4 – Fone de ouvido Bluetooth para chamadas cristalinas com cancelamento de ruído adaptável, vida útil da bateria de 60h, design leve dobrável – Preto) | Amazon.com.br",,301,0,1,1,0,0,admin,"2024-07-07 12:32:02","2024-07-07 12:32:02",1149,1149
 214,geonav-aer14bk,https://amzn.to/3VXgNWi,geonav-aer14bk,,301,0,1,1,0,0,admin,"2024-07-07 12:34:54","2024-07-07 12:34:54",846,845
@@ -238,9 +238,9 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 244,qcy-t13-tws-branco,https://amzn.to/44Td6Hi,qcy-t13-tws-branco,,301,0,1,1,0,0,admin,"2025-05-12 21:45:50","2025-05-12 21:45:50",313,313
 246,lention-t4,https://amzn.to/4bsHE6b,lention-t4,,301,0,1,1,0,0,admin,"2026-01-30 00:34:17","2026-01-30 00:34:17",540,538
 "9100","qcy-t13-pro-anc","https://www.amazon.com.br/dp/B0HGYCPX86?tag=melhoresfon05-20","QCY T13 Pro ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
-"9101","qcy-t13","https://www.amazon.com.br/dp/B0HGYCPX86?tag=melhoresfon05-20","QCY T13 Pro ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+9310,qcy-t13,https://www.amazon.com.br/dp/B09C1K95LB?tag=melhoresfon05-20,"QCY T13 TWS",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 "9102","qcy-melobuds-pro","https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20","QCY MeloBuds Pro","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
-"9103","qcy-ht05-melobuds","https://www.amazon.com.br/dp/B0F8HZ11R4?tag=melhoresfon05-20","QCY MeloBuds Pro","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
+9309,qcy-ht05-melobuds,https://www.amazon.com.br/dp/B0BMKJ9HGT?tag=melhoresfon05-20,"QCY HT05 Melobuds ANC",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
 "9104","qcy-h3","https://www.amazon.com.br/dp/B0CFZST5DV?tag=melhoresfon05-20","QCY H3 ANC","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
 "9105","qcy-melobuds-n20","https://www.amazon.com.br/dp/B0FZVC6PMD?tag=melhoresfon05-20","QCY MeloBuds N20","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
 "9106","qcy-ht07","https://www.amazon.com.br/dp/B0FZVC6PMD?tag=melhoresfon05-20","QCY MeloBuds N20","","301","","0","0","0","0","0","","","2026-10-29 18:00:00",""
@@ -258,3 +258,15 @@ id,slug,url,name,description,redirect_type,param_forwarding,track_me,nofollow,sp
 9204,kz-edc-pro,https://www.amazon.com.br/dp/B0D9NX22CZ?tag=melhoresfon05-20,"KZ EDC Pro",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
 9205,kz-zsn-pro-x,https://www.amazon.com.br/dp/B0CTXSX5BD?tag=melhoresfon05-20,"KZ ZSN Pro X",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
 9206,kz-az09,https://www.amazon.com.br/dp/B0DJQWJHN7?tag=melhoresfon05-20,"Módulo KZ AZ09 Bluetooth 5.4",,301,0,1,1,0,0,admin,"2026-10-29 22:40:00","2026-10-29 22:40:00",0,0
+9304,akg-k361-bt,https://www.amazon.com.br/dp/B07ZL6LK9H?tag=melhoresfon05-20,"AKG K361-BT",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9305,edifier-w820nb-plus,https://www.amazon.com.br/dp/B0BZMK331F?tag=melhoresfon05-20,"Edifier W820NB Plus",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9306,galaxy-buds-fe,https://www.amazon.com.br/dp/B0CJ9VBN95?tag=melhoresfon05-20,"Samsung Galaxy Buds FE",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9401,shokz-openrun-pro-2,https://www.amazon.com.br/dp/B0D2HHDKTD?tag=melhoresfon05-20,"Shokz OpenRun Pro 2",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9403,shokz-openswim-pro,https://www.amazon.com.br/dp/B0CS35T6NR?tag=melhoresfon05-20,"Shokz OpenSwim Pro",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9404,fone-natacao-conducao-ossea-ipx8,https://www.amazon.com.br/dp/B0FR1WDB8B?tag=melhoresfon05-20,"Fone Natação Condução Óssea IPX8 32GB",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9405,geonav-openbone,https://www.amazon.com.br/dp/B0GP7P92QC?tag=melhoresfon05-20,"Geonav OpenBone",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9406,aurafit-vibe-01,https://www.amazon.com.br/dp/B0HD784QWL?tag=melhoresfon05-20,"AURAFIT Vibe 01",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9407,philips-taq2000bk,https://www.amazon.com.br/dp/B0FBH7YK3Y?tag=melhoresfon05-20,"Philips TAQ2000BK Ear-Clip",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9408,shokz-openfit-2,https://www.amazon.com.br/dp/B0DYCJSZLS?tag=melhoresfon05-20,"Shokz OpenFit 2+",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9409,soundcore-v20i,https://www.amazon.com.br/dp/B0D2XRXNGY?tag=melhoresfon05-20,"soundcore V20i da Anker",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0
+9410,basike-bt33-conducao-ossea,https://www.amazon.com.br/dp/B0H5L59PY8?tag=melhoresfon05-20,"Basike BT33 Condução Óssea Earcuffs",,301,0,1,1,0,0,admin,"2026-10-30 22:50:00","2026-10-30 22:50:00",0,0

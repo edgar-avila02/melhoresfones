@@ -67,7 +67,7 @@ As meta tags são calibradas estritamente a partir do tema central e da H1 do ar
 | **3** | **Anti-IA** | Zero clichês robóticos detectados | [ ] OK |
 | **4** | **H1 Único** | Zero ocorrências de `#` no corpo do Markdown (H1 gerado pelo Astro) | [ ] OK |
 | **5** | **Fotos da Amazon** | 1ª imagem oficial principal em todos os cards | [ ] OK |
-| **6** | **Links Afiliados** | Tag `tag=melhoresfon05-20` presente em todas as conversões | [ ] OK |
+| **6** | **Pretty Links & Afiliados** | Pretty Links amigáveis (`/[slug]/`) cadastrados no CSV com redirect 301 para a Amazon (`tag=melhoresfon05-20`) | [ ] OK |
 | **7** | **Meta de Palavras** | Atingiu o intervalo de +20% a +30% da média do Top 5 | [ ] OK |
 | **8** | **Cards de Produto** | Estruturados em `.wp-block-afpb-review-style-one` | [ ] OK |
 | **9** | **Vídeo do YouTube 100% Ativo** | Player funcional, testado via terminal (`node scripts/verify-youtube.js [ID]`) com HTTP 200 OK | [ ] OK |

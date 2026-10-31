@@ -85,3 +85,27 @@ Esta regra é responsabilidade **exclusiva do Orquestrador**: ele conduz/aciona 
 - **Sem ferramenta de navegador:** abrir o Chrome pelo terminal (`chrome.exe --headless=new --dump-dom "https://www.google.com.br/search?q=[PALAVRA-CHAVE]&gl=br&hl=pt-BR&start=0"`, repetindo com `start=10` e `start=20`) e ler títulos e URLs dos resultados.
 - **Captcha ou bloqueio:** **PARAR e avisar o usuário.** Nunca usar outra fonte nem contornar o bloqueio.
 - **Conferência do Orquestrador:** antes de avançar para o Agente 02, confirmar que o relatório do Agente 01 traz os 5 concorrentes na ordem em que aparecem no Google Brasil. Se foram obtidos por outro meio, **descartar e refazer**.
+
+---
+
+## 🚨 REGRA Nº 0.1 DO ORQUESTRADOR (INEGOCIÁVEL): DISPONIBILIDADE REAL E ESTOQUE CONFIRMADO NA AMAZON BRASIL
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Estoque Ativo e Comprovado:** Todo produto sugerido em artigos comerciais **DEVE OBRIGATORIAMENTE ESTAR DISPONÍVEL PARA COMPRA IMEDIATA NA AMAZON BRASIL** (`amazon.com.br`).
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Incluir fones com status "Não disponível no momento", "Em falta", descontinuados, fora de linha ou com link/página de erro 404.
+- **Substituição Obrigatória de Esgotados:** Se um modelo clássico ou citado por concorrentes do Top 5 estiver sem estoque na Amazon Brasil, o Orquestrador deve substituí-lo imediatamente por um modelo superior ou equivalente da mesma marca/categoria que **tenha estoque ativo confirmado na Amazon Brasil**.
+- **Auditoria Prévia pelo Orquestrador:** O Orquestrador só libera a pauta e o payload para a redação após validar o ASIN, preço e a 1ª imagem oficial da Amazon em cada produto recomendado. Artigo comercial com fone indisponível é considerado falha grave do Orquestrador.
+
+---
+
+## 🚨 REGRA Nº 0.2 DO ORQUESTRADOR (INEGOCIÁVEL): PRETTY LINKS OBRIGATÓRIOS (SLUG DO PRODUTO + REDIRECT 301)
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Links Limpos com o Nome do Produto:** Todos os botões de conversão `.afpb__btn` e menções diretas nos artigos **DEVEM obrigatoriamente usar Pretty Links internos com o slug limpo do produto** no formato `/[slug-do-produto]/` (ex: `/sony-wh-1000xm4/`, `/shokz-openrun-pro-2/`, `/airpods-pro-2/`).
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Colocar URLs brutas da Amazon (`https://www.amazon.com.br/dp/...`) ou encurtadores externos antigos (`amzn.to`) diretamente no corpo do Markdown.
+- **Cadastro Obrigatório no CSV:** Cada novo produto selecionado deve ter seu slug cadastrado em `src/data/pretty-links.csv`, mapeando o slug limpo para a URL oficial da Amazon comissionada com `tag=melhoresfon05-20` (redirecionamento 301).
+- **Compilação Imediata de Redirects:** Sempre que um novo link for adicionado ao CSV, o Orquestrador deve compilar as regras executando:
+  ```bash
+  node scripts/generate-redirects.js
+  ```
+  garantindo que o arquivo `public/_redirects` contenha a regra ativa de redirecionamento 301 antes de liberar o artigo para preview local.

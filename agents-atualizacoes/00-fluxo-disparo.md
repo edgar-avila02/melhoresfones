@@ -108,3 +108,16 @@ flowchart TD
 ## 🚨 Regra Bloqueante: Pesquisa SEMPRE no Google Brasil
 - O Top 5 é levantado **somente no Google Brasil** (`google.com.br`, `gl=br&hl=pt-BR`), em navegador real (Chrome; no Windows, `chrome.exe --headless=new --dump-dom` se não houver ferramenta de navegador).
 - **JAMAIS** usar DuckDuckGo, Bing, `search_web` ou outro buscador. Se o Google pedir captcha ou bloquear, **pare e avise o usuário**.
+
+---
+
+## 🚨 Regra Bloqueante: Disponibilidade Real e Estoque na Amazon Brasil
+- É responsabilidade primária do **Orquestrador** auditar e garantir que **100% dos produtos recomendados** em artigos comerciais possuam **estoque ativo e disponível para compra na Amazon Brasil** (`amazon.com.br`).
+- Modelos "Não disponível no momento", "Em falta", fora de linha ou com páginas 404 são **expressamente proibidos**. Havendo indisponibilidade, o Orquestrador deve substituí-los imediatamente por modelos em estoque.
+
+---
+
+## 🚨 Regra Bloqueante: Pretty Links Obrigatórios e Redirect para a Amazon
+- Todos os links de botões de compra e conversão `.afpb__btn` devem ser Pretty Links limpos no formato `/[slug-do-produto]/` (ex: `/sony-wh-1000xm4/`, `/shokz-openrun-pro-2/`).
+- 🚫 **PROIBIDO** colocar links diretos da Amazon ou links encurtados externos no corpo do texto.
+- O Orquestrador deve cadastrar os Pretty Links no `src/data/pretty-links.csv` apontando para a Amazon com `tag=melhoresfon05-20` e compilar via `node scripts/generate-redirects.js` para atualizar o `public/_redirects`.

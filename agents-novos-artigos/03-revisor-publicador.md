@@ -87,6 +87,7 @@ Antes de gravar o arquivo no projeto, execute as seguintes checagens obrigatóri
 | **8. Hierarquia H1-H4** | H1 único, H2, H3 e H4 encadeados sem saltos | [ ] Sim / [ ] Não |
 | **9. Meta de Palavras** | Atingiu ou superou a meta estipulada pelo Agente 01 | [ ] Sim / [ ] Não |
 | **10. Legibilidade (2 a 3 linhas)** | Parágrafos curtos com média de 2 a 3 linhas (sem blocos grandes) | [ ] Sim / [ ] Não |
+| **11. Pretty Links & Redirects** | Botões com Pretty Links amigáveis (`/[slug]/`) cadastrados no CSV com redirect 301 para a Amazon | [ ] Sim / [ ] Não |
 
 > ⚠️ Se qualquer item falhar, corrija antes de realizar a gravação local.
 

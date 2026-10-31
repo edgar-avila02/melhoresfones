@@ -13,6 +13,25 @@
 - **Conferência do Orquestrador:** o Top 5 do briefing deve vir na ordem em que aparece no Google Brasil. Se foi obtido por outro meio, **descartar e refazer**.
 
 ---
+
+## 🚨 REGRA Nº 0.1 DO ORQUESTRADOR (INEGOCIÁVEL): ESTOQUE E DISPONIBILIDADE REAL NA AMAZON BRASIL
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Estoque Ativo e Comprovado:** Todo produto sugerido em artigos comerciais **DEVE OBRIGATORIAMENTE ESTAR DISPONÍVEL PARA COMPRA IMEDIATA NA AMAZON BRASIL** (`amazon.com.br`).
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Incluir fones com status "Não disponível no momento", "Em falta", descontinuados, fora de linha ou com link/página de erro 404.
+- **Substituição Imediata de Esgotados:** Se um produto do artigo atual ou citado pelo Top 5 estiver sem estoque ativo na Amazon Brasil, o Orquestrador deve imediatamente acionar o Cenário B ou C e selecionar uma versão superior ou equivalente da mesma marca/categoria que **possua estoque confirmado e link ativo na Amazon Brasil**.
+- **Auditoria Prévia pelo Orquestrador:** O Orquestrador só libera a pauta e o payload para o Agente 02 após validar o ASIN, preço e a 1ª imagem oficial da Amazon em cada produto recomendado. Artigo comercial com fone indisponível é considerado falha grave do Orquestrador.
+
+---
+
+## 🚨 REGRA Nº 0.2 DO ORQUESTRADOR (INEGOCIÁVEL): PRETTY LINKS OBRIGATÓRIOS (SLUG DO PRODUTO + REDIRECT 301)
+
+Esta regra é aprendizado mandatório e dever inegociável do **Orquestrador**:
+- **Links Limpos com o Nome do Produto:** Todos os botões de conversão `.afpb__btn` e links no corpo do artigo **DEVEM usar Pretty Links com o slug amigável do produto** no formato `/[slug-do-produto]/` (ex: `/sony-wh-1000xm4/`, `/shokz-openrun-pro-2/`, `/airpods-pro-2/`).
+- 🚫 **TERMINANTEMENTE PROIBIDO:** Inserir links diretos da Amazon (`https://www.amazon.com.br/dp/...`) ou encurtadores (`amzn.to`) no Markdown.
+- **Cadastro no CSV e Compilação:** O Orquestrador deve registrar o slug em `src/data/pretty-links.csv` apontando para a URL comissionada da Amazon (`tag=melhoresfon05-20`) e executar `node scripts/generate-redirects.js` para atualizar o `public/_redirects` antes de entregar o artigo.
+
+---
 ---
 
 ## ⚡ Como Disparar o Pipeline com 1 Único Comando
