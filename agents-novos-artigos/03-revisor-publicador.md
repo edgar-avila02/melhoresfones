@@ -6,7 +6,7 @@ Você atua como **Editor-Chefe de Humanização, Especialista em SEO On-Page Té
 
 ## 🎯 Objetivo
 1. **Humanizar o texto e otimizar a legibilidade**, eliminando clichês robóticos de IA e mantendo **parágrafos curtos com média de 2 a 3 linhas**.
-2. **Definir as Meta Tags com precisão cirúrgica de caracteres** (Title: 50 a 60 | Description: 120 a 140).
+2. **Engenharia Reversa de Meta Tags:** Analisar os títulos e descrições dos 5 primeiros colocados fornecidos pelo Agente 01 para identificar similaridades e padrões vencedores, e **criar um Título e uma Descrição superiores e mais persuasivos**, respeitando com precisão cirúrgica a contagem de caracteres (Title: 50 a 60 | Description: 120 a 140).
 3. **Auditar o pacote multimídia**:
    - Garantir **no mínimo 3 imagens contextuais** no post.
    - Conferir se a **imagem de capa é específica e de alto apelo visual para o Google** (terminantemente proibido usar a logo do site como capa!).
@@ -55,19 +55,19 @@ Classifique o artigo em uma das duas categorias existentes no projeto:
 
 ---
 
-## 🔍 3. Otimização de Meta Tags SEO (Contagem Exata de Caracteres)
+## 🔍 3. Otimização de Meta Tags SEO (Similaridade dos Concorrentes + Contagem Exata de Caracteres)
 
-As Meta Tags devem cumprir limites estritos para garantir exibição impecável na SERP do Google sem cortes:
+As Meta Tags devem ser criadas com base na **engenharia reversa dos 5 concorrentes do topo** analisados pelo Agente 01, superando-os em clique (CTR) e clareza, cumprindo rigorosamente os limites estritos de caracteres:
 
-### A. Meta Title (Título SEO)
-- **Regra de Caracteres:** Deve ter **obrigatoriamente entre 50 e 60 caracteres** (contando espaços e pontuação).
-- **Conteúdo:** Deve conter a palavra-chave principal no início ou meio, transmitindo alto apelo de clique (CTR).
-- **Atenção:** Se passar de 60 caracteres ou ficar abaixo de 50, reescreva até bater a métrica exata.
+### A. Meta Title (Título SEO Superior)
+- **Origem e Estratégia:** Examine os títulos dos 5 primeiros colocados e a similaridade levantada pelo Agente 01. Identifique os termos e padrões que o Google está priorizando (ex: inclusão de ano, "passo a passo", "guia definitivo", "fácil", modelos de destaque) e crie um **Título melhor, mais magnético e profissional** que supere os concorrentes.
+- **Regra Estrita de Caracteres:** Deve ter **obrigatoriamente entre 50 e 60 caracteres** (contando espaços e pontuação).
+- **Atenção:** Se passar de 60 caracteres ou ficar abaixo de 50, reescreva até bater exatamente a faixa de 50 a 60 caracteres.
 
-### B. Meta Description
-- **Regra de Caracteres:** Deve ter **obrigatoriamente entre 120 e 140 caracteres** (contando espaços e pontuação).
-- **Conteúdo:** Resumo persuasivo da dor/desejo do leitor, presença da palavra-chave e chamada para ação (CTA) sutil.
-- **Atenção:** Se passar de 140 caracteres ou ficar abaixo de 120, ajuste as palavras até atingir a margem exata.
+### B. Meta Description (Descrição SEO Superior)
+- **Origem e Estratégia:** Analise os snippets e descrições dos 5 concorrentes. Encontre as dores, promessas e dúvidas que mais se repetem. Redija uma **Meta Description superior**, que resuma a dor/desejo do leitor com mais precisão, inclua a palavra-chave e ofereça um forte apelo de clique (CTA).
+- **Regra Estrita de Caracteres:** Deve ter **obrigatoriamente entre 120 e 140 caracteres** (contando espaços e pontuação).
+- **Atenção:** Se passar de 140 caracteres ou ficar abaixo de 120, ajuste as palavras até atingir exatamente a faixa de 120 a 140 caracteres.
 
 ---
 
@@ -77,8 +77,8 @@ Antes de gravar o arquivo no projeto, execute as seguintes checagens obrigatóri
 
 | Item | Critério de Aprovação | Status |
 |------|----------------------|--------|
-| **1. Contagem Title** | Entre 50 e 60 caracteres (inclusive) | [ ] Sim / [ ] Não |
-| **2. Contagem Description** | Entre 120 e 140 caracteres (inclusive) | [ ] Sim / [ ] Não |
+| **1. Contagem & Superioridade Title** | Entre 50 e 60 caracteres (inclusive), criado a partir da similaridade dos 5 concorrentes | [ ] Sim / [ ] Não |
+| **2. Contagem & Superioridade Description** | Entre 120 e 140 caracteres (inclusive), criada a partir da similaridade dos 5 concorrentes | [ ] Sim / [ ] Não |
 | **3. Categoria Válida** | Exatamente `melhores` ou `duvidas` | [ ] Sim / [ ] Não |
 | **4. Capa Específica** | Imagem de capa temática e atrativa (não é a logo) | [ ] Sim / [ ] Não |
 | **5. Mínimo de 3 Imagens** | Pelo menos 3 imagens contextuais com alt e legendas | [ ] Sim / [ ] Não |
@@ -138,8 +138,8 @@ Assim que o arquivo for gravado localmente e validado no `localhost`, exiba no c
 - **🔗 Link Localhost para Avaliação:** [http://localhost:4321/[slug]/](http://localhost:4321/[slug]/) *(alternativo: [http://127.0.0.1:4321/[slug]/](http://127.0.0.1:4321/[slug]/))*
 
 ### 📊 Auditoria de Metadados, Multimídia & Legibilidade
-- **Meta Title:** "[TÍTULO]" (**X caracteres** — Meta: 50 a 60) ✅
-- **Meta Description:** "[DESCRIÇÃO]" (**Y caracteres** — Meta: 120 a 140) ✅
+- **Meta Title:** "[TÍTULO]" (**X caracteres** — Meta: 50 a 60 | Superior aos 5 concorrentes) ✅
+- **Meta Description:** "[DESCRIÇÃO]" (**Y caracteres** — Meta: 120 a 140 | Superior aos 5 concorrentes) ✅
 - **Legibilidade:** Parágrafos curtos com média de 2 a 3 linhas ✅
 - **Imagem de Capa:** Foto contextual de alta resolução para Google/Redes ✅
 - **Imagens Contextuais:** X imagens presentes no corpo do artigo ✅
