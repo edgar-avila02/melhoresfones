@@ -1,0 +1,36 @@
+name: Publicação Automática em Redes Sociais
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/content/posts/**.md'
+
+jobs:
+  publish-to-social:
+    name: Gerar Copy com IA e Publicar (Facebook & Pinterest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Permite que o git diff identifique os artigos do último commit
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Executar Agente Especialista e Publicar
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+        run: node scripts/publish-social.js
