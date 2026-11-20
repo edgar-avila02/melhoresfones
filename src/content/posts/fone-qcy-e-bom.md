@@ -17,9 +17,9 @@ tags:
 
 Se você pesquisou por fones de ouvido sem fio com bom custo-benefício nos últimos meses, certamente se deparou com a marca QCY. Presente em massa nos rankings de vendas da Amazon e nos fóruns de áudio, a fabricante chinesa conquistou uma legião de defensores ao entregar cancelamento ativo de ruído, baterias duradouras e equalização por aplicativo cobrando uma fração do que marcas como Sony, JBL ou Apple costumam exigir.
 
-Mas diante de preços tão acessíveis, surge a dúvida legítima de quem gosta de ouvir música com fidelidade: **fone QCY é bom mesmo ou é apenas um produto barato descartável?**
+Mas diante de preços tão acessíveis, surge a dúvida legítima de quem gosta de ouvir música com fidelidade: **fone QCY é bom mesmo ou é apenas um produto barato descartável?**. Se quiser se aprofundar em o review completo do QCY H3, [veja o guia completo](/qcy-h3-review/).
 
-Para responder a essa pergunta com precisão técnica e sem rodeios, colocamos os modelos mais vendidos da QCY em nossa bancada de testes. Avaliamos a resposta de frequência, o comportamento dos drivers, a estabilidade de conexão sob interferências de tráfego urbano, a autonomia real de carga e a eficiência do cancelamento de ruído.
+Para responder a essa pergunta com precisão técnica e sem rodeios, colocamos os modelos mais vendidos da QCY em nossa bancada de testes. Avaliamos a resposta de frequência, o comportamento dos drivers, a estabilidade de conexão sob interferências de tráfego urbano, a autonomia real de carga e a eficiência do cancelamento de ruído. Vale também conferir nosso conteúdo sobre [qcy t13 review](/qcy-t13-review/) para complementar sua pesquisa.
 
 Neste guia completo, explicamos a origem da marca, seus diferenciais de engenharia acústica, os pontos em que ela ainda precisa evoluir e os 5 melhores modelos para você investir seu dinheiro com total segurança.
 
@@ -65,7 +65,7 @@ Um dos maiores trunfos da marca é o suporte ao aplicativo **QCY App** (disponí
 * Localizador de fones por emissão de sinal sonoro.
 
 ### 3. Cancelamento ativo de ruído (ANC) real
-Muitas marcas econômicas anunciam "cancelamento de ruído" referindo-se apenas ao bloqueio do microfone em chamadas (ENC). A QCY, por outro lado, disponibiliza **Cancelamento Ativo de Ruído Híbrido verdadeiro (ANC)** a partir de modelos intermediários como o HT05 e o H3.
+Muitas marcas econômicas anunciam "cancelamento de ruído" referindo-se apenas ao bloqueio do microfone em chamadas (ENC). A QCY, por outro lado, disponibiliza **Cancelamento Ativo de Ruído Híbrido verdadeiro (ANC)** a partir de modelos intermediários como [o HT05](/fone-qcy-ht05-e-bom/) e o H3.
 
 Em nossos testes práticos, o sistema com múltiplos microfones internos e externos consegue atenuar frequências graves contínuas (como o ronco de motores de ônibus, turbinas de avião e compressores de ar-condicionado) em até 40 dB a 43 dB. Embora não alcance o silêncio absoluto de fones topo de linha da Sony ou Bose, o isolamento é mais do que suficiente para garantir concentração em escritórios, cafés e no transporte público.
 
@@ -366,7 +366,7 @@ Sim. Todos os fones da QCY utilizam conexão Bluetooth universal padrão e são 
 A forma mais segura de evitar réplicas ou produtos recondicionados é adquirir através de distribuidores oficiais na Amazon Brasil com envio garantido. Além disso, as embalagens originais da QCY possuem selo holográfico na lateral com código raspável para verificação no site global da marca. Outro teste infalível: fones falsificados não são reconhecidos pelo aplicativo oficial da QCY ao conectar.
 
 ### O cancelamento de ruído da QCY realmente funciona ou é golpe de marketing?
-Nos modelos que possuem a tecnologia ANC estampada na ficha técnica (como HT05, HT07 e H3), o cancelamento é real e funcional, operando por inversão de fase das ondas sonoras captadas pelos microfones externos. Ele bloqueia com eficácia sons graves constantes (motores, zumbidos elétricos e ar-condicionado). Contudo, vozes agudas próximas e sons percussivos repentinos continuam sendo levemente audíveis, comportamento comum até mesmo em fones premium.
+Nos modelos que possuem a tecnologia ANC estampada na ficha técnica (como HT05, [HT07](/qcy-ht07-vs-ht05/) e H3), o cancelamento é real e funcional, operando por inversão de fase das ondas sonoras captadas pelos microfones externos. Ele bloqueia com eficácia sons graves constantes (motores, zumbidos elétricos e ar-condicionado). Contudo, vozes agudas próximas e sons percussivos repentinos continuam sendo levemente audíveis, comportamento comum até mesmo em fones premium.
 
 ### O que fazer caso um dos lados do fone QCY fique mudo ou desemparelhe?
 Esse é um problema de dessincronização comum em fones Bluetooth de qualquer marca. Para resolver em menos de 1 minuto:

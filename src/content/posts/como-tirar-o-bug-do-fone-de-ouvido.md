@@ -21,7 +21,7 @@ Para tirar o bug do fone de ouvido preso no celular, o método mais rápido é l
 
 Se o ícone persistir na tela, plugue e retire o fone de 5 a 10 vezes seguidas com uma música tocando, ou force a saída de som pelo alto-falante usando o aplicativo gratuito Lesser AudioSwitch no Android.
 
-Caso o bug esteja no próprio fone Bluetooth (luz LED travada acesa, fone que não desliga ou som chiando), segure o botão de toque por 20 a 30 segundos fora do estojo para forçar o reset de hardware da controladora. A seguir, veja como aplicar cada correção.
+Caso o bug esteja no próprio fone Bluetooth (luz LED travada acesa, fone que não desliga ou som chiando), segure o botão de toque por 20 a 30 segundos fora do estojo para forçar o reset de hardware da controladora. A seguir, veja como aplicar cada correção. Se precisar de um passo a passo para [conectar os dois fones bluetooth](/como-conectar-os-dois-fones-bluetooth/), vale conferir nosso guia dedicado. Quer saber mais sobre como resetar o QCY T1C? [Leia mais](/como-resetar-o-fone-qcy-t1c/) no nosso conteúdo dedicado.
 
 ---
 
@@ -38,7 +38,7 @@ A causa quase sempre é mecânica. As entradas de fone de ouvido (P2 de 3,5 mm) 
   </figure>
 </div>
 
-Com o transporte constante no bolso da calça, fiapos de tecido, poeira compactada e até gotículas microscópicas de suor criam uma ponte condutora. O sistema operacional interpreta essa sujeira como um fone conectado permanentemente.
+Com o transporte constante no bolso da calça, fiapos de tecido, poeira compactada e até gotículas microscópicas de suor criam uma ponte condutora. O sistema operacional interpreta essa sujeira como um fone conectado permanentemente. Para comparar outras opções, veja nosso guia de [problemas de conexão](/o-que-fazer-quando-o-fone-de-ouvido-nao-conecta/).
 
 ---
 

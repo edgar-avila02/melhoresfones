@@ -19,15 +19,15 @@ tags:
 
 Para saber se o seu AirPods está totalmente carregado, basta observar a luz indicadora de LED do estojo de recarga ou aproximá-lo do seu iPhone.
 
-Quando os fones estão dentro do estojo e a luz LED acende em verde constante, significa que eles atingiram 100% de carga. Se o LED acender na cor âmbar (laranja), os fones ainda estão sendo recarregados ou possuem menos de uma carga completa restante.
+Quando os fones estão dentro do estojo e a luz LED acende em verde constante, significa que eles atingiram 100% de carga. Se o LED acender na cor âmbar (laranja), os fones ainda estão sendo recarregados ou possuem menos de uma carga completa restante. Você pode explorar como saber se o fone Bluetooth está carregado com mais calma — [confira neste artigo](/como-saber-se-o-fone-de-ouvido-bluetooth-esta-carregado/).
 
-Com o estojo conectado à tomada ou na base de indução MagSafe, o LED verde indica que a própria case já está com a bateria completa. No iPhone, basta abrir a tampa do estojo perto da tela desbloqueada para ver o percentual exato na hora.
+Com o estojo conectado à tomada ou na base de indução MagSafe, o LED verde indica que a própria case já está com a bateria completa. No iPhone, basta abrir a tampa do estojo perto da tela desbloqueada para ver o percentual exato na hora. Caso queira aprender como [recarregar o fone](/como-carregar-fone-de-ouvido-bluetooth/), preparamos um tutorial completo sobre o tema.
 
 ---
 
 ## O que significa a cor da luz LED no estojo do AirPods?
 
-O estojo de carregamento do AirPods possui um único LED inteligente capaz de transmitir diferentes diagnósticos do sistema por meio de cores e padrões de piscada.
+O estojo de carregamento do AirPods possui um único LED inteligente capaz de transmitir diferentes diagnósticos do sistema por meio de cores e padrões de piscada. Se precisar de um passo a passo para [saber se airpods é original](/como-saber-se-airpods-e-original/), vale conferir nosso guia dedicado.
 
 A localização dessa luz varia conforme a geração: nos modelos com estojo de carregamento sem fio (AirPods 3, AirPods 4 e AirPods Pro 1 e 2), o LED fica na face frontal externa. Já no AirPods de 1ª e 2ª geração com estojo padrão Lightning, o LED fica posicionado no interior, entre os dois fones.
 

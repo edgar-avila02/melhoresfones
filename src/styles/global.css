@@ -2180,6 +2180,29 @@ main {
   font-weight: 700;
 }
 
+/* Destaque visual para links no corpo do artigo (sem afetar botões CTA) */
+.article-content :is(p, li, td, blockquote) a:not(.afpb__btn):not(.wp-block-button__link) {
+  color: var(--color-accent-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 99, 235, 0.45);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  border-radius: 4px;
+  padding: 0 2px;
+  transition: color var(--transition-fast), background-color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.article-content :is(p, li, td, blockquote) a:not(.afpb__btn):not(.wp-block-button__link) strong {
+  color: inherit;
+}
+
+.article-content :is(p, li, td, blockquote) a:not(.afpb__btn):not(.wp-block-button__link):hover {
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  text-decoration-color: #1d4ed8;
+}
+
 /* Imagens no Artigo - Proporção Harmônica e Responsiva */
 .article-content img {
   border-radius: var(--radius-md);

@@ -20,7 +20,7 @@ Para **saber se um AirPods é original**, o método mais confiável é confirmar
 
 Além do software, fones autênticos contam com **Áudio Espacial com rastreamento dinâmico**, **Cancelamento Ativo de Ruído (ANC)** real e carcaça com dobradiça de metal fosco, botão traseiro nivelado e grelhas microperfuradas.
 
-Apenas checar o número de série no portal da Apple deixou de ser suficiente. Em nossa bancada de testes, recebemos toda semana réplicas *1:1* que usam códigos clonados de unidades legítimas de vitrine.
+Apenas checar o número de série no portal da Apple deixou de ser suficiente. Em nossa bancada de testes, recebemos toda semana réplicas *1:1* que usam códigos clonados de unidades legítimas de vitrine. Veja também nossas dicas práticas de como [limpar fone de ouvido apple](/como-limpar-fone-de-ouvido-apple/) sem complicação.
 
 Esses códigos enganam facilmente o site de garantia, embora o fone traga peças genéricas por dentro. Por isso, confiar somente na caixa lacrada é hoje o erro mais comum de quem compra seminovos.
 
@@ -32,7 +32,7 @@ Durante anos, a recomendação padrão era pegar o código impresso na caixa e c
 
 ### O golpe da clonagem de números de série legítimos
 
-Fábricas clandestinas compram ou fotografam caixas de AirPods originais em lojas oficiais. A partir daí, gravam o mesmo número de série válido em milhares de embalagens falsificadas.
+Fábricas clandestinas compram ou fotografam caixas de AirPods originais em lojas oficiais. A partir daí, gravam o mesmo número de série válido em milhares de embalagens falsificadas. Para conferir todos os detalhes sobre como conferir a bateria dos AirPods, [clique aqui](/como-saber-se-o-airpods-esta-carregado/).
 
 Ao digitar essa sequência no portal de suporte, o sistema da Apple confirma que o código existe no banco de dados. Para o comprador desavisado, essa tela parece um atestado definitivo de procedência.
 
@@ -59,7 +59,7 @@ Abaixo organizamos a bateria completa de verificações que fazemos em nossa ban
 
 ### 1. O teste do firmware: o calcanhar de Aquiles das réplicas
 
-Este é o teste mais seguro e à prova de falhas que existe hoje. Os AirPods genuínos usam chips proprietários (Apple H1, H2 ou W1) que recebem atualizações automáticas silenciosas enviadas pelo iPhone.
+Este é o teste mais seguro e à prova de falhas que existe hoje. Os AirPods genuínos usam chips proprietários (Apple H1, H2 ou W1) que recebem atualizações automáticas silenciosas enviadas pelo iPhone. Caso queira aprender como [parear com o iphone](/como-conectar-fone-sem-fio-no-iphone/), preparamos um tutorial completo sobre o tema.
 
 Nenhuma réplica do mercado — por mais cara que seja sua placa interna — consegue autenticar nos servidores criptografados da Apple para atualizar o firmware. Veja como checar em segundos:
 

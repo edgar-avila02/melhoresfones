@@ -24,7 +24,7 @@ Neste guia, explicamos o que a ANAC realmente diz, como conectar passo a passo e
 
 ## O que a ANAC diz sobre fone Bluetooth no avião?
 
-A ANAC não cita fones Bluetooth pelo nome. A norma brasileira (Instrução Suplementar nº 91.21-001) deixa a cargo de cada companhia definir quais aparelhos eletrônicos podem ser usados em cada fase do voo.
+A ANAC não cita fones Bluetooth pelo nome. A norma brasileira (Instrução Suplementar nº 91.21-001) deixa a cargo de cada companhia definir quais aparelhos eletrônicos podem ser usados em cada fase do voo. Vale também conferir nosso conteúdo sobre [tecnologia bluetooth](/como-funciona-o-fone-de-ouvido-bluetooth/) para complementar sua pesquisa.
 
 Nessa lógica, o Bluetooth é tratado como uma transmissão de rádio intencional, no mesmo grupo de Wi-Fi e rede celular. Liberar o uso depende de a empresa demonstrar que aquela aeronave tolera esses sinais.
 
@@ -99,7 +99,7 @@ Nesses aviões, você pareia o fone direto na telinha, sem adaptador. Como a fro
 
 Se você viaja mais de uma ou duas vezes por ano, sim. O adaptador é barato e ocupa pouco espaço na bagagem de mão.
 
-Antes de comprar, confira a autonomia da bateria do transmissor e se ele permite parear dois fones ao mesmo tempo, útil para casais e famílias.
+Antes de comprar, confira a autonomia da bateria do transmissor e se ele permite parear dois fones ao mesmo tempo, útil para casais e famílias. Se esse perfil combina com o seu uso, confira também [fone de ouvido bluetooth que dura mais tempo](/fone-de-ouvido-bluetooth-que-dura-mais-tempo/).
 
 ## Tutorial em vídeo: fone sem fio na tela de qualquer avião
 
@@ -134,7 +134,7 @@ Avise a tripulação a qualquer sinal de calor, cheiro estranho ou fumaça no fo
 
 ## Qual fone é melhor para viajar de avião?
 
-Para voos longos, dois recursos fazem diferença: o cancelamento ativo de ruído (ANC) e a autonomia da bateria. O ANC atenua o ronco constante das turbinas, que cansa em poucas horas.
+Para voos longos, dois recursos fazem diferença: o cancelamento ativo de ruído (ANC) e a autonomia da bateria. O ANC atenua o ronco constante das turbinas, que cansa em poucas horas. Para comparar outras opções, veja nosso guia de [fone de ouvido que isola o som externo](/melhor-fone-de-ouvido-que-isola-o-som-externo/).
 
 Se você viaja com frequência, escolha um modelo com estojo que recarrega o fone várias vezes e conexão estável. Confira nosso ranking dos [melhores fones TWS](/melhores-fones-tws/) para comparar opções.
 
